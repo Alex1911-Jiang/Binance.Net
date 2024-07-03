@@ -46,7 +46,7 @@ namespace Binance.Net.Clients.SpotApi
             ExchangeData = new BinanceSocketClientSpotApiExchangeData(logger, this);
             Trading = new BinanceSocketClientSpotApiTrading(logger, this);
 
-            _brokerId = !string.IsNullOrEmpty(options.SpotOptions.BrokerId) ? options.SpotOptions.BrokerId! : "x-VICEW9VV";
+            _brokerId = !string.IsNullOrEmpty(options.SpotOptions.BrokerId) ? options.SpotOptions.BrokerId! : "x-cZeHu29p";
 
             // When sending more than 4000 bytes the server responds very delayed (somehow connected to the websocket keep alive interval)
             // See https://dev.binance.vision/t/socket-live-subscribing-server-delay/9645/2
