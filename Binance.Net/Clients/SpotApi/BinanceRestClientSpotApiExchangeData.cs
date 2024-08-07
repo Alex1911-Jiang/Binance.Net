@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text.Json;
 using Binance.Net.Converters;
 using Binance.Net.Enums;
 using Binance.Net.Interfaces;
@@ -14,7 +16,7 @@ using Binance.Net.Objects.Models.Spot.Margin;
 namespace Binance.Net.Clients.SpotApi
 {
     /// <inheritdoc />
-    public class BinanceRestClientSpotApiExchangeData : IBinanceRestClientSpotApiExchangeData
+    internal class BinanceRestClientSpotApiExchangeData : IBinanceRestClientSpotApiExchangeData
     {
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
 
@@ -81,7 +83,7 @@ namespace Binance.Net.Clients.SpotApi
                     list.Add(permission.ToString().ToUpper());
                 }
 
-                parameters.Add("permissions", JsonConvert.SerializeObject(list));
+                parameters.Add("permissions", JsonSerializer.Serialize(list));
             }
             else if (permissions.Any())
             {
@@ -106,7 +108,7 @@ namespace Binance.Net.Clients.SpotApi
 
             if (symbols.Count() > 1)
             {
-                parameters.Add("symbols", JsonConvert.SerializeObject(symbols));
+                parameters.Add("symbols", JsonSerializer.Serialize(symbols));
             }
             else if (symbols.Any())
             {
@@ -136,7 +138,7 @@ namespace Binance.Net.Clients.SpotApi
 
         #endregion
 
-        #region asset details
+        #region Get Asset Details
         /// <inheritdoc />
         public async Task<WebCallResult<Dictionary<string, BinanceAssetDetails>>> GetAssetDetailsAsync(int? receiveWindow = null, CancellationToken ct = default)
         {
@@ -246,8 +248,8 @@ namespace Binance.Net.Clients.SpotApi
             limit?.ValidateIntBetween(nameof(limit), 1, 1500);
             var parameters = new ParameterCollection {
                 { "symbol", symbol },
-                { "interval", JsonConvert.SerializeObject(interval, new KlineIntervalConverter(false)) }
             };
+            parameters.AddEnum("interval", interval);
             parameters.AddOptionalParameter("startTime", DateTimeConverter.ConvertToMilliseconds(startTime));
             parameters.AddOptionalParameter("endTime", DateTimeConverter.ConvertToMilliseconds(endTime));
             parameters.AddOptionalParameter("limit", limit?.ToString(CultureInfo.InvariantCulture));
@@ -267,8 +269,8 @@ namespace Binance.Net.Clients.SpotApi
             limit?.ValidateIntBetween(nameof(limit), 1, 1500);
             var parameters = new ParameterCollection {
                 { "symbol", symbol },
-                { "interval", JsonConvert.SerializeObject(interval, new KlineIntervalConverter(false)) }
             };
+            parameters.AddEnum("interval", interval);
             parameters.AddOptionalParameter("startTime", DateTimeConverter.ConvertToMilliseconds(startTime));
             parameters.AddOptionalParameter("endTime", DateTimeConverter.ConvertToMilliseconds(endTime));
             parameters.AddOptionalParameter("limit", limit?.ToString(CultureInfo.InvariantCulture));
@@ -536,8 +538,8 @@ namespace Binance.Net.Clients.SpotApi
             var parameters = new ParameterCollection
             {
                 { "symbol", symbol },
-                { "interval", JsonConvert.SerializeObject(interval, new KlineIntervalConverter(false)) }
             };
+            parameters.AddEnum("interval", interval);
             parameters.AddOptionalParameter("startTime", DateTimeConverter.ConvertToMilliseconds(startTime));
             parameters.AddOptionalParameter("endTime", DateTimeConverter.ConvertToMilliseconds(endTime));
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? _baseClient.ClientOptions.ReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));

@@ -2,7 +2,16 @@
 
 [![.NET](https://img.shields.io/github/actions/workflow/status/JKorf/Binance.Net/dotnet.yml?style=for-the-badge)](https://github.com/JKorf/Binance.Net/actions/workflows/dotnet.yml) ![License](https://img.shields.io/github/license/JKorf/Binance.Net?style=for-the-badge)
 
-Binance.Net is a strongly typed client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). All data is mapped to readable models and enum values. Additional features include an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.
+Binance.Net is a strongly typed client library for accessing the [Binance REST and Websocket API](https://binance-docs.github.io/apidocs/#change-log). 
+## Features
+* Response data is mapped to descriptive models
+* Input parameters and response values are mapped to discriptive enum values where possible
+* Automatic websocket (re)connection management 
+* Client side rate limiting 
+* Cient side order book implementation
+* Extensive logging
+* Support for different environments (binance.com, binance.us, testnet)
+* Easy integration with other exchange client based on the CryptoExchange.Net base library
 
 ## Supported Frameworks
 The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for optimal compatibility
@@ -17,10 +26,21 @@ The library is targeting both `.NET Standard 2.0` and `.NET Standard 2.1` for op
 |UWP|`10.0.16299` and higher|
 |Unity|`2018.1` and higher|
 
-## Get the library
-[![Nuget version](https://img.shields.io/nuget/v/binance.net.svg?style=for-the-badge)](https://www.nuget.org/packages/Binance.Net)  [![Nuget downloads](https://img.shields.io/nuget/dt/Binance.Net.svg?style=for-the-badge)](https://www.nuget.org/packages/Binance.Net)
+## Install the library
+
+### NuGet 
+[![NuGet version](https://img.shields.io/nuget/v/binance.net.svg?style=for-the-badge)](https://www.nuget.org/packages/Binance.Net)  [![Nuget downloads](https://img.shields.io/nuget/dt/Binance.Net.svg?style=for-the-badge)](https://www.nuget.org/packages/Binance.Net)
 
 	dotnet add package Binance.Net
+	
+### GitHub packages
+Binance.Net is available on [GitHub packages](https://github.com/JKorf/Binance.Net/pkgs/nuget/Binance.Net). You'll need to add `https://nuget.pkg.github.com/JKorf/index.json` as a NuGet package source.
+
+### Download release
+[![GitHub Release](https://img.shields.io/github/v/release/JKorf/Binance.Net?style=for-the-badge&label=GitHub)](https://github.com/JKorf/Binance.Net/releases)
+
+The NuGet package files are added along side the source with the latest GitHub release which can found [here](https://github.com/JKorf/Binance.Net/releases).
+
 	
 ## How to use
 *REST Endpoints*  
@@ -59,6 +79,7 @@ CryptoExchange.Net also allows for [easy access to different exchange API's](htt
 |BingX|[JKorf/BingX.Net](https://github.com/JKorf/BingX.Net)|[![Nuget version](https://img.shields.io/nuget/v/JK.BingX.net.svg?style=flat-square)](https://www.nuget.org/packages/JK.BingX.Net)|
 |Bitfinex|[JKorf/Bitfinex.Net](https://github.com/JKorf/Bitfinex.Net)|[![Nuget version](https://img.shields.io/nuget/v/Bitfinex.net.svg?style=flat-square)](https://www.nuget.org/packages/Bitfinex.Net)|
 |Bitget|[JKorf/Bitget.Net](https://github.com/JKorf/Bitget.Net)|[![Nuget version](https://img.shields.io/nuget/v/JK.Bitget.net.svg?style=flat-square)](https://www.nuget.org/packages/JK.Bitget.Net)|
+|BitMart|[JKorf/BitMart.Net](https://github.com/JKorf/BitMart.Net)|[![Nuget version](https://img.shields.io/nuget/v/BitMart.net.svg?style=flat-square)](https://www.nuget.org/packages/BitMart.Net)|
 |Bybit|[JKorf/Bybit.Net](https://github.com/JKorf/Bybit.Net)|[![Nuget version](https://img.shields.io/nuget/v/Bybit.net.svg?style=flat-square)](https://www.nuget.org/packages/Bybit.Net)|
 |CoinEx|[JKorf/CoinEx.Net](https://github.com/JKorf/CoinEx.Net)|[![Nuget version](https://img.shields.io/nuget/v/CoinEx.net.svg?style=flat-square)](https://www.nuget.org/packages/CoinEx.Net)|
 |CoinGecko|[JKorf/CoinGecko.Net](https://github.com/JKorf/CoinGecko.Net)|[![Nuget version](https://img.shields.io/nuget/v/CoinGecko.net.svg?style=flat-square)](https://www.nuget.org/packages/CoinGecko.Net)|
@@ -155,6 +176,26 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 10.0.1 - 05 Aug 2024
+    * Fixed deserialization issue UsdtFuturesApi.Account.GetIncomeHistoryAsync
+
+* Version 10.0.0 - 27 Jul 2024
+    * Updated CryptoExchange.Net to version 7.10.0, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.10.0
+    * Switch from Newtonsoft.Json implementation to System.Text.Json for (de)serialization
+    * Refactored from old per type enum converter to EnumConverter usage
+    * Added SpotApi.Account.GetCommissionRatesAsync endpoint
+    * Added UsdFuturesApi.Account.GetSymbolConfigurationAsync endpoint
+    * Added UsdFuturesApi.Account.GetAccountConfigurationAsync endpoint
+    * Added UsdFuturesApi.Trading.GetPositionsAsync endpoint
+    * Added PermissionSets property to SpotApi.ExchangeData.GetExchangeInfoAsync symbol response
+    * Updated UsdFuturesApi.Account.GetBalancesAsync to V3
+    * Updated UsdFuturesApi.Account.GetAccountInfoAsync to V3
+
+* Version 9.12.0 - 16 Jul 2024
+    * Updated CryptoExchange.Net to version 7.9.0, see https://github.com/JKorf/CryptoExchange.Net/releases/tag/7.9.0
+    * Updated internal classes to internal access modifier
+    * Updated WebSocket rate limit rule to prevent triggering disconnect
+
 * Version 9.11.1 - 02 Jul 2024
     * Updated CryptoExchange.Net to V7.8.0
     * Updated ratelimiting for per-endpoint limits

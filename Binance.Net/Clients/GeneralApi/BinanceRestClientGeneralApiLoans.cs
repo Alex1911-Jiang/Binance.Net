@@ -7,7 +7,7 @@ using Binance.Net.Objects.Models.Spot.Loans;
 namespace Binance.Net.Clients.GeneralApi
 {
     /// <inheritdoc />
-    public class BinanceRestClientGeneralApiLoans : IBinanceRestClientGeneralApiLoans
+    internal class BinanceRestClientGeneralApiLoans : IBinanceRestClientGeneralApiLoans
     {
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
 
@@ -26,7 +26,7 @@ namespace Binance.Net.Clients.GeneralApi
             {
                 { "asset", asset }
             };
-            parameters.AddOptionalParameter("type", type.HasValue ? JsonConvert.SerializeObject(type.Value, new LoanIncomeTypeConverter(false)) : null);
+            parameters.AddOptionalEnum("type", type);
             parameters.AddOptionalParameter("limit", limit?.ToString(CultureInfo.InvariantCulture));
             parameters.AddOptionalParameter("startTime", DateTimeConverter.ConvertToMilliseconds(startTime));
             parameters.AddOptionalParameter("endTime", DateTimeConverter.ConvertToMilliseconds(endTime));

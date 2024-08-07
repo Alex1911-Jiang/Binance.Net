@@ -13,7 +13,7 @@ using CryptoExchange.Net.RateLimiting.Interfaces;
 namespace Binance.Net.Clients.UsdFuturesApi
 {
     /// <inheritdoc cref="IBinanceRestClientUsdFuturesApi" />
-    public class BinanceRestClientUsdFuturesApi : RestApiClient, IBinanceRestClientUsdFuturesApi, IFuturesClient
+    internal class BinanceRestClientUsdFuturesApi : RestApiClient, IBinanceRestClientUsdFuturesApi, IFuturesClient
     {
         #region fields 
         /// <inheritdoc />
@@ -95,7 +95,11 @@ namespace Binance.Net.Clients.UsdFuturesApi
         /// <inheritdoc />
         protected override AuthenticationProvider CreateAuthenticationProvider(ApiCredentials credentials)
             => new BinanceAuthenticationProvider(credentials);
-       
+
+        protected override IStreamMessageAccessor CreateAccessor() => new SystemTextJsonStreamMessageAccessor();
+
+        protected override IMessageSerializer CreateSerializer() => new SystemTextJsonMessageSerializer();
+
         internal Uri GetUrl(string endpoint, string api, string? version = null)
         {
             var result = BaseAddress.AppendPath(api);

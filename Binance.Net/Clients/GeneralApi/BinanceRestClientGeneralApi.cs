@@ -9,7 +9,7 @@ using CryptoExchange.Net.RateLimiting.Interfaces;
 namespace Binance.Net.Clients.GeneralApi
 {
     /// <inheritdoc cref="IBinanceRestClientGeneralApi" />
-    public class BinanceRestClientGeneralApi : RestApiClient, IBinanceRestClientGeneralApi
+    internal class BinanceRestClientGeneralApi : RestApiClient, IBinanceRestClientGeneralApi
     {
         #region fields 
         /// <inheritdoc />
@@ -62,6 +62,10 @@ namespace Binance.Net.Clients.GeneralApi
         /// <inheritdoc />
         protected override AuthenticationProvider CreateAuthenticationProvider(ApiCredentials credentials)
             => new BinanceAuthenticationProvider(credentials);
+
+        protected override IStreamMessageAccessor CreateAccessor() => new SystemTextJsonStreamMessageAccessor();
+
+        protected override IMessageSerializer CreateSerializer() => new SystemTextJsonMessageSerializer();
 
         /// <inheritdoc />
         public override string FormatSymbol(string baseAsset, string quoteAsset) => baseAsset.ToUpperInvariant() + quoteAsset.ToUpperInvariant();

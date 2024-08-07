@@ -8,7 +8,7 @@ using Binance.Net.Objects.Models.Spot.Margin;
 namespace Binance.Net.Clients.GeneralApi
 {
     /// <inheritdoc />
-    public class BinanceRestClientGeneralApiFutures : IBinanceRestClientGeneralApiFutures
+    internal class BinanceRestClientGeneralApiFutures : IBinanceRestClientGeneralApiFutures
     {
         private static readonly RequestDefinitionCache _definitions = new RequestDefinitionCache();
 
@@ -28,8 +28,8 @@ namespace Binance.Net.Clients.GeneralApi
             {
                 { "asset", asset },
                 { "amount", quantity.ToString(CultureInfo.InvariantCulture) },
-                { "type", JsonConvert.SerializeObject(transferType, new FuturesTransferTypeConverter(false)) }
             };
+            parameters.AddEnum("type", transferType);
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? _baseClient.ClientOptions.ReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
 
             var request = _definitions.GetOrCreate(HttpMethod.Post, "sapi/v1/futures/transfer", BinanceExchange.RateLimiter.SpotRestIp, 1, true);

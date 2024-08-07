@@ -7,10 +7,10 @@
   <PropertyGroup>
     <PackageId>Binance.Net</PackageId>
     <Authors>JKorf</Authors>
-    <PackageVersion>9.11.1</PackageVersion>
-    <AssemblyVersion>9.11.1</AssemblyVersion>
-    <FileVersion>9.11.1</FileVersion>
-    <Description>Binance.Net is a client library for accessing the Binance REST and Websocket API. All data is mapped to readable models and enum values. Additional features include an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.</Description>
+    <PackageVersion>10.0.1</PackageVersion>
+    <AssemblyVersion>10.0.1</AssemblyVersion>
+    <FileVersion>10.0.1</FileVersion>
+    <Description>Binance.Net is a client library for accessing the Binance REST and Websocket API. All data is mapped to readable models and enum values. Additional features include automatic websocket (re)connection management, client side rate limiting, an implementation for maintaining a client side order book, easy integration with other exchange client libraries and more.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>Binance;Binance.Net;Binance Client;Binance API;CryptoCurrency;CryptoCurrency Exchange</PackageTags>
     <RepositoryType>git</RepositoryType>
@@ -48,7 +48,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="CryptoExchange.Net" Version="7.8.0" />
+    <PackageReference Include="CryptoExchange.Net" Version="7.10.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
