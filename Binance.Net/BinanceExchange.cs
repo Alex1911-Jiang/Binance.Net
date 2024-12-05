@@ -38,8 +38,8 @@ namespace Binance.Net
             "https://binance-docs.github.io/apidocs/spot/en/#change-log"
             };
 
-        internal const string ClientOrderIdSpot = "x-VICEW9VV";
-        internal const string ClientOrderIdFutures = "x-d63tKbx3";
+        internal const string ClientOrderIdSpot = "x-cZeHu29p";
+        internal const string ClientOrderIdFutures = "x-cZeHu29p";
         internal const string ClientOrderIdPrefixSpot = ClientOrderIdSpot + LibraryHelpers.ClientOrderIdSeperator;
         internal const string ClientOrderIdPrefixFutures = ClientOrderIdFutures + LibraryHelpers.ClientOrderIdSeperator;
 
