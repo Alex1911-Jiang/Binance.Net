@@ -43,8 +43,8 @@ namespace Binance.Net
         /// </summary>
         public static ExchangeType Type { get; } = ExchangeType.CEX;
 
-        internal const string ClientOrderIdSpot = "x-VICEW9VV";
-        internal const string ClientOrderIdFutures = "x-d63tKbx3";
+        internal const string ClientOrderIdSpot = "x-FS8YWQY9";
+        internal const string ClientOrderIdFutures = "x-cZeHu29p";
         internal const string ClientOrderIdPrefixSpot = ClientOrderIdSpot + LibraryHelpers.ClientOrderIdSeperator;
         internal const string ClientOrderIdPrefixFutures = ClientOrderIdFutures + LibraryHelpers.ClientOrderIdSeperator;
 
