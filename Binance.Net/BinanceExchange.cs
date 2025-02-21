@@ -45,8 +45,8 @@ namespace Binance.Net
 
         internal const string ClientOrderIdSpot = "x-FS8YWQY9";
         internal const string ClientOrderIdFutures = "x-cZeHu29p";
-        internal const string ClientOrderIdPrefixSpot = ClientOrderIdSpot + LibraryHelpers.ClientOrderIdSeperator;
-        internal const string ClientOrderIdPrefixFutures = ClientOrderIdFutures + LibraryHelpers.ClientOrderIdSeperator;
+        internal const string ClientOrderIdPrefixSpot = ClientOrderIdSpot + LibraryHelpers.ClientOrderIdSeparator;
+        internal const string ClientOrderIdPrefixFutures = ClientOrderIdFutures + LibraryHelpers.ClientOrderIdSeparator;
 
         /// <summary>
         /// Format a base and quote asset to a Binance recognized symbol 
