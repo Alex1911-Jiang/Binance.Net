@@ -116,7 +116,8 @@ namespace Binance.Net.Clients.SpotApi
             int? receiveWindow = null,
             CancellationToken ct = default)
         {
-            var result = await _baseClient.PlaceOrderInternal(_baseClient.GetUrl("order", "api", "3"),
+            var result = await _baseClient.PlaceOrderInternal("/api/v3/order",
+                BinanceExchange.RateLimiter.SpotRestUid,
                 symbol,
                 side,
                 type,
@@ -137,7 +138,6 @@ namespace Binance.Net.Clients.SpotApi
                 null,
                 receiveWindow,
                 1,
-                BinanceExchange.RateLimiter.SpotRestUid,
                 ct).ConfigureAwait(false);
             if (result)
                 _baseClient.InvokeOrderPlaced(new OrderId() { SourceObject = result.Data, Id = result.Data.Id.ToString(CultureInfo.InvariantCulture) });
@@ -774,7 +774,8 @@ namespace Binance.Net.Clients.SpotApi
             int? receiveWindow = null,
             CancellationToken ct = default)
         {
-            var result = await _baseClient.PlaceOrderInternal(_baseClient.GetUrl("margin/order", "sapi", "1"),
+            var result = await _baseClient.PlaceOrderInternal("/sapi/v1/margin/order",
+                BinanceExchange.RateLimiter.SpotRestUid,
                 symbol,
                 side,
                 type,
@@ -795,7 +796,6 @@ namespace Binance.Net.Clients.SpotApi
                 autoRepayAtCancel,
                 receiveWindow,
                 weight: 6,
-                BinanceExchange.RateLimiter.SpotRestUid,
                 ct).ConfigureAwait(false);
 
             if (result)
@@ -927,7 +927,8 @@ namespace Binance.Net.Clients.SpotApi
         #region Query Margin Account's Trade List
 
         /// <inheritdoc />
-        public async Task<WebCallResult<IEnumerable<BinanceTrade>>> GetMarginUserTradesAsync(string symbol, DateTime? startTime = null, DateTime? endTime = null, int? limit = null, long? fromId = null, bool? isIsolated = null, long? receiveWindow = null, CancellationToken ct = default)
+        public async Task<WebCallResult<IEnumerable<BinanceTrade>>> GetMarginUserTradesAsync(string symbol, long? orderId = null, DateTime? startTime = null, DateTime? endTime = null,
+            int? limit = null, long? fromId = null, bool? isIsolated = null, long? receiveWindow = null, CancellationToken ct = default)
         {
             limit?.ValidateIntBetween(nameof(limit), 1, 1000);
 
@@ -935,6 +936,7 @@ namespace Binance.Net.Clients.SpotApi
             {
                 { "symbol", symbol }
             };
+            parameters.AddOptionalParameter("orderId", orderId);
             parameters.AddOptionalParameter("limit", limit?.ToString(CultureInfo.InvariantCulture));
             parameters.AddOptionalParameter("isIsolated", isIsolated);
             parameters.AddOptionalParameter("fromId", fromId?.ToString(CultureInfo.InvariantCulture));
