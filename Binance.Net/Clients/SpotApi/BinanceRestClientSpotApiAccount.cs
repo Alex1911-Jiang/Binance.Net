@@ -1,5 +1,4 @@
-﻿using Binance.Net.Converters;
-using Binance.Net.Enums;
+﻿using Binance.Net.Enums;
 using Binance.Net.Interfaces.Clients.SpotApi;
 using Binance.Net.Objects.Internal;
 using Binance.Net.Objects.Models;
@@ -293,9 +292,10 @@ namespace Binance.Net.Clients.SpotApi
 
         #region Get Wallet Balances
         /// <inheritdoc />
-        public async Task<WebCallResult<IEnumerable<BinanceWalletBalance>>> GetWalletBalancesAsync(int? receiveWindow = null, CancellationToken ct = default)
+        public async Task<WebCallResult<IEnumerable<BinanceWalletBalance>>> GetWalletBalancesAsync(string quoteAsset = "BTC", int? receiveWindow = null, CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
+            parameters.AddParameter("quoteAsset", quoteAsset);
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? _baseClient.ClientOptions.ReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
 
             var request = _definitions.GetOrCreate(HttpMethod.Get, "sapi/v1/asset/wallet/balance", BinanceExchange.RateLimiter.SpotRestIp, 60, true);
@@ -385,14 +385,14 @@ namespace Binance.Net.Clients.SpotApi
 
         #region Dust Elligable
         /// <inheritdoc />
-        public async Task<WebCallResult<BinanceElligableDusts>> GetAssetsForDustTransferAsync(AccountType? accountType = null, int? receiveWindow = null, CancellationToken ct = default)
+        public async Task<WebCallResult<BinanceEligibleDusts>> GetAssetsForDustTransferAsync(AccountType? accountType = null, int? receiveWindow = null, CancellationToken ct = default)
         {
             var parameters = new ParameterCollection();
             parameters.AddOptionalEnum("accountType", accountType);
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? _baseClient.ClientOptions.ReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
 
             var request = _definitions.GetOrCreate(HttpMethod.Post, "sapi/v1/asset/dust-btc", BinanceExchange.RateLimiter.SpotRestIp, 1, true);
-            return await _baseClient.SendAsync<BinanceElligableDusts>(request, parameters, ct).ConfigureAwait(false);
+            return await _baseClient.SendAsync<BinanceEligibleDusts>(request, parameters, ct).ConfigureAwait(false);
         }
 
         #endregion

@@ -1,7 +1,6 @@
 ﻿using Binance.Net.Interfaces.Clients.CoinFuturesApi;
 using Binance.Net.Enums;
 using CryptoExchange.Net.SharedApis;
-using System.Linq.Expressions;
 
 namespace Binance.Net.Clients.CoinFuturesApi
 {
@@ -661,7 +660,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
         #endregion
 
         #region Trade History client
-        GetTradeHistoryOptions ITradeHistoryRestClient.GetTradeHistoryOptions { get; } = new GetTradeHistoryOptions(SharedPaginationSupport.Ascending, true, 1000, false);
+        GetTradeHistoryOptions ITradeHistoryRestClient.GetTradeHistoryOptions { get; } = new GetTradeHistoryOptions(SharedPaginationSupport.Ascending, true, 500, false);
 
         async Task<ExchangeWebResult<IEnumerable<SharedTrade>>> ITradeHistoryRestClient.GetTradeHistoryAsync(GetTradeHistoryRequest request, INextPageToken? pageToken, CancellationToken ct)
         {
@@ -678,7 +677,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
                 request.Symbol.GetSymbol(FormatSymbol),
                 startTime: fromId != null ? null : request.StartTime,
                 endTime: fromId != null ? null : request.EndTime,
-                limit: request.Limit ?? 1000,
+                limit: request.Limit ?? 500,
                 fromId: fromId,
                 ct: ct).ConfigureAwait(false);
             if (!result)

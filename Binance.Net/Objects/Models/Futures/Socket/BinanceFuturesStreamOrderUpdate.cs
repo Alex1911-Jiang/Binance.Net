@@ -1,4 +1,3 @@
-using Binance.Net.Converters;
 using Binance.Net.Enums;
 
 namespace Binance.Net.Objects.Models.Futures.Socket
@@ -109,7 +108,7 @@ namespace Binance.Net.Objects.Models.Futures.Socket
         [JsonPropertyName("L")]
         public decimal PriceLastFilledTrade { get; set; }
         /// <summary>
-        /// The fee payed
+        /// The fee paid
         /// </summary>
         [JsonPropertyName("n")]
         public decimal Fee { get; set; }
