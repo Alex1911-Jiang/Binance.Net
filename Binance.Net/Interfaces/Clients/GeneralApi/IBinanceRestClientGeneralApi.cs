@@ -58,5 +58,16 @@
         /// </summary>
         /// <see cref="IBinanceRestClientGeneralApiCopyTrading"/>
         IBinanceRestClientGeneralApiCopyTrading CopyTrading { get; }
+
+        /// <summary>
+        /// Endpoints related to Binance Gift Cards
+        /// </summary>
+        public IBinanceRestClientGeneralApiGiftCard GiftCard { get; }
+
+        /// <summary>
+        /// Endpoints related to Binance Nft
+        /// </summary>
+        /// <see cref="IBinanceRestClientGeneralApiNft"/>
+        IBinanceRestClientGeneralApiNft Nft { get; }
     }
 }

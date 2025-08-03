@@ -30,6 +30,7 @@ namespace Binance.Net.UnitTests
             await tester.ValidateAsync(client => client.SpotApi.Account.GetWithdrawalHistoryAsync(), "GetWithdrawalHistory");
             await tester.ValidateAsync(client => client.SpotApi.Account.GetWithdrawalAddressesAsync(), "GetWithdrawalAddresses");
             await tester.ValidateAsync(client => client.SpotApi.Account.GetDepositAddressAsync("ETH"), "GetDepositAddress");
+            await tester.ValidateAsync(client => client.SpotApi.Account.GetDepositAddressesAsync("ETH"), "GetDepositAddressesList");
             await tester.ValidateAsync(client => client.SpotApi.Account.GetDepositHistoryAsync(), "GetDepositHistory");
             await tester.ValidateAsync(client => client.SpotApi.Account.GetDailySpotAccountSnapshotAsync(), "GetDailySpotAccountSnapshot", "snapshotVos");
             await tester.ValidateAsync(client => client.SpotApi.Account.GetDailyMarginAccountSnapshotAsync(), "GetDailyMarginAccountSnapshot", "snapshotVos");
@@ -472,6 +473,36 @@ namespace Binance.Net.UnitTests
             await tester.ValidateAsync(client => client.GeneralApi.AutoInvest.GetPlanHoldingsAsync(), "GetPlanHoldings");
             await tester.ValidateAsync(client => client.GeneralApi.AutoInvest.GetIndexLinkedPlanPositionDetailsAsync(123), "GetIndexLinkedPlanPositionDetails");
             await tester.ValidateAsync(client => client.GeneralApi.AutoInvest.GetIndexLinkedPlanRebalanceHistoryAsync(), "GetIndexLinkedPlanRebalanceHistory");
+        }
+
+        [Test]
+        public async Task ValidateGeneralFuturesCalls()
+        {
+            var client = new BinanceRestClient(opts => 
+            {
+                opts.RateLimiterEnabled = false;
+                opts.AutoTimestamp = false;
+                opts.ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "456");
+            });
+            var tester = new RestRequestValidator<BinanceRestClient>(client, "Endpoints/General/Futures", "https://api.binance.com", IsAuthenticated);
+            await tester.ValidateAsync(client => client.GeneralApi.Futures.TransferFuturesAccountAsync("ETH", 1, Enums.FuturesTransferType.FromSpotToUsdtFutures), "TransferFuturesAccount");
+            await tester.ValidateAsync(client => client.GeneralApi.Futures.GetFuturesTransferHistoryAsync("ETH", DateTime.UtcNow.AddDays(-1)), "GetFuturesTransferHistory");
+        }
+
+        [Test]
+        public async Task ValidateGeneralNftCalls()
+        {
+            var client = new BinanceRestClient(opts =>
+            {
+                opts.RateLimiterEnabled = false;
+                opts.AutoTimestamp = false;
+                opts.ApiCredentials = new CryptoExchange.Net.Authentication.ApiCredentials("123", "456");
+            });
+            var tester = new RestRequestValidator<BinanceRestClient>(client, "Endpoints/General/Nft", "https://api.binance.com", IsAuthenticated);
+            await tester.ValidateAsync(client => client.GeneralApi.Nft.GetNftDepositHistoryAsync(), "GetNftDepositHistory");
+            await tester.ValidateAsync(client => client.GeneralApi.Nft.GetNftWithdrawHistoryAsync(), "GetNftWithdrawHistory");
+            await tester.ValidateAsync(client => client.GeneralApi.Nft.GetNftTransactionHistoryAsync(Enums.NftOrderType.PurchaseOrder), "GetNftTransactionHistory");
+            await tester.ValidateAsync(client => client.GeneralApi.Nft.GetNftAssetAsync(), "GetNftAsset");
         }
 
         private bool IsAuthenticated(WebCallResult result)
