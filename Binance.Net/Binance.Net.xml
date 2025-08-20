@@ -752,6 +752,12 @@
         <member name="P:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApi.CopyTrading">
             <inheritdoc />
         </member>
+        <member name="P:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApi.GiftCard">
+            <inheritdoc />
+        </member>
+        <member name="P:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApi.Nft">
+            <inheritdoc />
+        </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApi.CreateAuthenticationProvider(CryptoExchange.Net.Authentication.ApiCredentials)">
             <inheritdoc />
         </member>
@@ -947,31 +953,76 @@
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiFutures.GetFuturesTransferHistoryAsync(System.String,System.DateTime,System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="T:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.CreateSingleTokenGiftCardAsync(System.String,System.Double,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.CreateDualTokenGiftCardAsync(System.String,System.String,System.Double,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.RedeemGiftCardAsync(System.String,System.String,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.VerifyGiftCardByNumberAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.GetTokenLimitAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiGiftCard.GetRsaPublicKeyAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="T:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetCollateralAssetsAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetLoanableAssetsAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.BorrowAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.RepayAsync(System.String,System.String,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.RepayCollateralAsync(System.String,System.String,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.AdjustLTVAsync(System.String,System.String,System.Decimal,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetFlexibleLtvAdjustHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetCollateralRepayRateAsync(System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetFlexibleBorrowHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetOpenBorrowOrdersAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetLiquidationHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetFlexibleRepayHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetIncomeHistoryAsync(System.String,System.Nullable{Binance.Net.Enums.LoanIncomeType},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.BorrowAsync(System.String,System.String,System.Int32,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetBorrowHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetOpenBorrowOrdersAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.RepayAsync(System.Int64,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetLtvAdjustHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetRepayHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.AdjustLTVAsync(System.Int64,System.Decimal,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <inheritdoc />
-        </member>
-        <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetLtvAdjustHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.GeneralApi.BinanceRestClientGeneralApiLoans.GetLoanableAssetsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -1682,7 +1733,7 @@
         <member name="M:Binance.Net.Clients.SpotApi.BinanceRestClientSpotApiTrading.PlaceTestOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.SelfTradePreventionMode},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.SpotApi.BinanceRestClientSpotApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.SelfTradePreventionMode},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.SpotApi.BinanceRestClientSpotApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.SelfTradePreventionMode},System.Nullable{Binance.Net.Enums.PegPriceType},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.PegOffsetType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.SpotApi.BinanceRestClientSpotApiTrading.CancelOrderAsync(System.String,System.Nullable{System.Int64},System.String,System.String,System.Nullable{Binance.Net.Enums.CancelRestriction},System.Nullable{System.Int64},System.Threading.CancellationToken)">
@@ -2400,6 +2451,9 @@
         <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiAccount.GetAccountInfoAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
+        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiAccount.GetAccountInfoV1Async(System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiAccount.SubscribeToUserDataUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamConfigUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamMarginUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamAccountUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamOrderUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamTradeUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.BinanceStreamEvent}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceStrategyUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceGridUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceConditionOrderTriggerRejectUpdate}},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
@@ -2427,16 +2481,16 @@
         <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToAllMarkPriceUpdatesAsync(System.Nullable{System.Int32},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesUsdtStreamMarkPrice[]}},System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
-        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:Binance.Net.Clients.UsdFuturesApi.BinanceSocketClientUsdFuturesApiExchangeData.SubscribeToContinuousContractKlineUpdatesAsync(System.String,Binance.Net.Enums.ContractType,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceStreamContinuousKlineData}},System.Threading.CancellationToken)">
@@ -2697,6 +2751,16 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.FlexibleBorrowRecordStatus">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.FlexibleBorrowStatus">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.FuturesAccountType">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
@@ -2777,6 +2841,11 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.LoanLiquidationStatus">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.MarginLevelStatus">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
@@ -2828,6 +2897,26 @@
             </summary>
         </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.PayWalletType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.PegOffsetType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.NullablePegOffsetType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.PegPriceType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.NullablePegPriceType">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -2888,6 +2977,11 @@
             </summary>
         </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.RedemptionType">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.RepayStatus">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -3038,6 +3132,11 @@
             </summary>
         </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceResponseBinanceCoinFuturesAccountBalanceArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceResponseBinanceFuturesAccountInfo">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -6622,6 +6721,51 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinaceGiftCardData">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardRedeemData">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardResponseBinaceGiftCardData">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardResponseBinanceGiftCardRedeemData">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardResponseBinanceGiftCardTokenLimit">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardResponseBinanceGiftCardValidity">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardResponseString">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardTokenLimit">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceGiftCardValidity">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceIsolatedMarginAccount">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
@@ -6717,12 +6861,52 @@
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleBorrowRecord">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleBorrowRecordArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleLtvAdjustRecord">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleLtvAdjustRecordArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleRepayRecord">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanFlexibleRepayRecordArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanIncome">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
         </member>
         <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanIncomeArray">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanLiquidationRecord">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Converters.BinanceSourceGenerationContext.BinanceCryptoLoanLiquidationRecordArray">
             <summary>
             Defines the source generated JSON serialization contract metadata for a given type.
             </summary>
@@ -9261,6 +9445,46 @@
             Expired
             </summary>
         </member>
+        <member name="T:Binance.Net.Enums.FlexibleBorrowRecordStatus">
+            <summary>
+            Flexible Borrow Status
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowRecordStatus.Success">
+            <summary>
+            Successful execution
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowRecordStatus.Failed">
+            <summary>
+            Execution failed
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowRecordStatus.Pending">
+            <summary>
+            Pending to execute
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Enums.FlexibleBorrowStatus">
+            <summary>
+            Flexible Borrow Status
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowStatus.Succeeds">
+            <summary>
+            Successful execution
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowStatus.Failed">
+            <summary>
+            Execution failed
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.FlexibleBorrowStatus.Processing">
+            <summary>
+            Processing
+            </summary>
+        </member>
         <member name="T:Binance.Net.Enums.FuturesAccountType">
             <summary>
             Futures account type
@@ -9686,6 +9910,21 @@
             Collateral return after liquidation
             </summary>
         </member>
+        <member name="T:Binance.Net.Enums.LoanLiquidationStatus">
+            <summary>
+            Loan liquidation status
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.LoanLiquidationStatus.Liquidated">
+            <summary>
+            Liquidated
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.LoanLiquidationStatus.Liquidating">
+            <summary>
+            Liquidating
+            </summary>
+        </member>
         <member name="T:Binance.Net.Enums.MarginInventoryType">
             <summary>
             Type of margin inventory.
@@ -10079,6 +10318,31 @@
         <member name="F:Binance.Net.Enums.PayWalletType.Earn">
             <summary>
             Earn wallet
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Enums.PegOffsetType">
+            <summary>
+            Peg offset type
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.PegOffsetType.PriceLevel">
+            <summary>
+            Price level
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Enums.PegPriceType">
+            <summary>
+            Peg price type
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.PegPriceType.PrimaryPeg">
+            <summary>
+            Primary peg
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.PegPriceType.MarketPeg">
+            <summary>
+            Market peg
             </summary>
         </member>
         <member name="T:Binance.Net.Enums.PeriodInterval">
@@ -10566,6 +10830,26 @@
             Early redemption
             </summary>
         </member>
+        <member name="T:Binance.Net.Enums.RepayStatus">
+            <summary>
+            Repay status
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.RepayStatus.Repaid">
+            <summary>
+            Repaid
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.RepayStatus.Repaying">
+            <summary>
+            Repaying
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.RepayStatus.Failed">
+            <summary>
+            Failed
+            </summary>
+        </member>
         <member name="T:Binance.Net.Enums.RewardType">
             <summary>
             Simple Earn Reward type
@@ -10929,6 +11213,16 @@
         <member name="F:Binance.Net.Enums.SymbolFilterType.PositionRiskControl">
             <summary>
             Position Risk Control Filter
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.SymbolFilterType.OrderAmends">
+            <summary>
+            Max number of edits per order
+            </summary>
+        </member>
+        <member name="F:Binance.Net.Enums.SymbolFilterType.OrderLists">
+            <summary>
+            Max number of order lists
             </summary>
         </member>
         <member name="T:Binance.Net.Enums.SymbolStatus">
@@ -12803,6 +13097,17 @@
             </summary>
             <see cref="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiCopyTrading"/>
         </member>
+        <member name="P:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApi.GiftCard">
+            <summary>
+            Endpoints related to Binance Gift Cards
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApi.Nft">
+            <summary>
+            Endpoints related to Binance Nft
+            </summary>
+            <see cref="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiNft"/>
+        </member>
         <member name="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiAutoInvest">
             <summary>
             Binance Auto Invest endpoints
@@ -13500,15 +13805,242 @@
             <param name="ct">Cancellation token</param>
             <returns>History</returns>
         </member>
+        <member name="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard">
+            <summary>
+            Binance gift card endpoints
+            </summary>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.CreateSingleTokenGiftCardAsync(System.String,System.Double,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Create a single-token gift card
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data" /></para>
+            </summary>
+            <param name="token">The token type contained in the Binance Gift Card</param>
+            <param name="amount">The amount of the token contained in the Binance Gift Card</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.CreateDualTokenGiftCardAsync(System.String,System.String,System.Double,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Create a dual-token gift card
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data/Create-a-dual-token-gift-card" /></para>
+            </summary>
+            <param name="baseToken">The token you want to pay, example: BUSD</param>
+            <param name="faceToken">The token you want to buy, example: BNB</param>
+            <param name="baseTokenAmount">The base token asset quantity, example: 1.002</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.RedeemGiftCardAsync(System.String,System.String,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Redeem a Binance Gift Card
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data/Redeem-a-Binance-Gift-Card" /></para>
+            </summary>
+            <param name="code">Redemption code of Binance Gift Card to be redeemed, supports both Plaintext and Encrypted code.</param>
+            <param name="externalUid">External UID</param>
+            <param name="useEncryption">Encrypts the code if true, sends as plaintext otherwise</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.VerifyGiftCardByNumberAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Verify Binance Gift Card by Gift Card Number
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data/Verify-Binance-Gift-Card-by-Gift-Card-Number" /></para>
+            </summary>
+            <param name="referenceNumber">The Gift Card Number</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.GetTokenLimitAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get Token Limit
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data/Fetch-Token-Limit" /></para>
+            </summary>
+            <param name="baseToken">The token you want to pay, example: BUSD</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiGiftCard.GetRsaPublicKeyAsync(System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get RSA public key
+            <para><a href="https://developers.binance.com/docs/gift_card/market-data/Fetch-RSA-Public-Key" /></para>
+            </summary>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
         <member name="T:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans">
             <summary>
             Binance Spot Crypto loans endpoints
             </summary>
         </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetCollateralAssetsAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get LTV information and collateral limit of collateral assets. The collateral limit is shown in USD value.
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/market-data" /></para>
+            </summary>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetLoanableAssetsAsync(System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get interest rate and borrow limit of loanable assets. The borrow limit is shown in USD value.
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/market-data/Get-Flexible-Loan-Assets-Data" /></para>
+            </summary>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.BorrowAsync(System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Borrow flexible loan
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/trade" /></para>
+            </summary>
+            <param name="loanAsset">Asset to loan</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="loanQuantity">Quantity to loan in loan asset</param>
+            <param name="collateralQuantity">Quantity to loan in collateral asset</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.RepayAsync(System.String,System.String,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Repay flexible loan
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/trade/Flexible-Loan-Repay" /></para>
+            </summary>
+            <param name="loanAsset">Asset to loan</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="quantity">Quantity to loan in loan asset</param>
+            <param name="collateralReturn">Return extra collateral to spot account</param>
+            <param name="fullRepayment">Is fully repaid</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.RepayCollateralAsync(System.String,System.String,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Repay collateral flexible loan
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/trade/Flexible-Loan-Collateral-Repay" /></para>
+            </summary>
+            <param name="loanAsset">Asset to loan</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="quantity">Quantity to loan in loan asset</param>
+            <param name="collateralReturn">Return extra collateral to spot account</param>
+            <param name="fullRepayment">RIs fully repaid</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.AdjustLTVAsync(System.String,System.String,System.Decimal,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Adjust LTV for a loan
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/trade/Flexible-Loan-Adjust-LTV" /></para>
+            </summary>
+            <param name="loanAsset">Asset to loan</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="quantity">Adjustment quantity</param>
+            <param name="addOrRemove">True for add, false to reduce</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetFlexibleLtvAdjustHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get flexible loan LTV adjustment history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information" /></para>
+            </summary>
+            <param name="loanAsset">Asset to loan</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="startTime">Filter by startTime from</param>
+            <param name="endTime">Filter by endTime from</param>
+            <param name="page">Page number</param>
+            <param name="limit">Limit of the amount of results</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetCollateralRepayRateAsync(System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get the latest rate of collateral coin/loan coin when using collateral repay.
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information/Check-Collateral-Repay-Rate" /></para>
+            </summary>
+            <param name="loanAsset">Loan asset</param>
+            <param name="collateralAsset">Collateral asset</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetFlexibleBorrowHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get flexible borrow order history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information/Get-Flexible-Loan-Borrow-History" /></para>
+            </summary>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="startTime">Filter by start time</param>
+            <param name="endTime">Filter by end time</param>
+            <param name="page">Page number</param>
+            <param name="limit">Page size</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetOpenBorrowOrdersAsync(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get ongoing flexible loan orders
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information/Get-Flexible-Loan-Ongoing-Orders" /></para>
+            </summary>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="page">Page number</param>
+            <param name="limit">Page size</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetLiquidationHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get flexible loan liquidation history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information/Get-Flexible-Loan-Liquidation-History" /></para>
+            </summary>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="startTime">Filter by start time</param>
+            <param name="endTime">Filter by end time</param>
+            <param name="page">Page number</param>
+            <param name="limit">Page size</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetFlexibleRepayHistoryAsync(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get flexible loan repayment history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/flexible-rate/user-information/Get-Flexible-Loan-Repayment-History" /></para>
+            </summary>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="startTime">Filter by start time</param>
+            <param name="endTime">Filter by end time</param>
+            <param name="page">Page number</param>
+            <param name="limit">Page size</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetIncomeHistoryAsync(System.String,System.Nullable{Binance.Net.Enums.LoanIncomeType},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Get income history from crypto loans
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-crypto-loans-income-history-user_data" /></para>
+            Get income history from stable crypto loans
+            <para><a href="https://developers.binance.com/docs/crypto_loan/stable-rate/market-data" /></para>
             </summary>
             <param name="asset">The asset</param>
             <param name="type">Filter by type of incoming</param>
@@ -13519,24 +14051,10 @@
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.BorrowAsync(System.String,System.String,System.Int32,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <summary>
-            Take a crypto loan
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#borrow-crypto-loan-borrow-trade" /></para>
-            </summary>
-            <param name="loanAsset">Asset to loan</param>
-            <param name="collateralAsset">Collateral asset</param>
-            <param name="loanTerm">Loan term in days, 7/14/30/90/180</param>
-            <param name="loanQuantity">Quantity to loan in loan asset</param>
-            <param name="collateralQuantity">Quantity to loan in collateral asset</param>
-            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
-            <param name="ct">Cancellation token</param>
-            <returns></returns>
-        </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetBorrowHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Get borrow order history
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#borrow-get-loan-borrow-history-user_data" /></para>
+            Get stable borrow order history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/stable-rate/user-information" /></para>
             </summary>
             <param name="orderId">Filter by order id</param>
             <param name="loanAsset">Filter by loan asset</param>
@@ -13545,61 +14063,6 @@
             <param name="endTime">Filter by end time</param>
             <param name="page">Page number</param>
             <param name="limit">Page size</param>
-            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
-            <param name="ct">Cancellation token</param>
-            <returns></returns>
-        </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetOpenBorrowOrdersAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <summary>
-            Get ongoing loan orders
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#borrow-get-loan-ongoing-orders-user_data" /></para>
-            </summary>
-            <param name="orderId">Filter by order id</param>
-            <param name="loanAsset">Filter by loan asset</param>
-            <param name="collateralAsset">Filter by collateral asset</param>
-            <param name="page">Page number</param>
-            <param name="limit">Page size</param>
-            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
-            <param name="ct">Cancellation token</param>
-            <returns></returns>
-        </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.RepayAsync(System.Int64,System.Decimal,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <summary>
-            Repay a loan
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#repay-crypto-loan-repay-trade" /></para>
-            </summary>
-            <param name="orderId">Order id to repay</param>
-            <param name="quantity">Quantity to repay</param>
-            <param name="repayWithBorrowedAsset">True to repay with the borrowed asset, false to repay with collateral asset</param>
-            <param name="collateralReturn">Return extra collateral to spot account</param>
-            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
-            <param name="ct">Cancellation token</param>
-            <returns></returns>
-        </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetRepayHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <summary>
-            Get loan repayment history
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#repay-get-loan-repayment-history-user_data" /></para>
-            </summary>
-            <param name="orderId">Filter by order id</param>
-            <param name="loanAsset">Filter by loan asset</param>
-            <param name="collateralAsset">Filter by collateral asset</param>
-            <param name="startTime">Filter by start time</param>
-            <param name="endTime">Filter by end time</param>
-            <param name="page">Page number</param>
-            <param name="limit">Page size</param>
-            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
-            <param name="ct">Cancellation token</param>
-            <returns></returns>
-        </member>
-        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.AdjustLTVAsync(System.Int64,System.Decimal,System.Boolean,System.Nullable{System.Int64},System.Threading.CancellationToken)">
-            <summary>
-            Adjust LTV for a loan
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#adjust-ltv-crypto-loan-adjust-ltv-trade" /></para>
-            </summary>
-            <param name="orderId">Order id</param>
-            <param name="quantity">Adjustment quantity</param>
-            <param name="addOrRemove">True for add, false to reduce</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -13607,7 +14070,23 @@
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetLtvAdjustHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
             Get LTV adjustment history
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#adjust-ltv-get-loan-ltv-adjustment-history-user_data" /></para>
+            <para><a href="https://developers.binance.com/docs/crypto_loan/stable-rate/user-information/Get-Loan-LTV-Adjustment-History" /></para>
+            </summary>
+            <param name="orderId">Filter by order id</param>
+            <param name="loanAsset">Filter by loan asset</param>
+            <param name="collateralAsset">Filter by collateral asset</param>
+            <param name="startTime">Filter by start time</param>
+            <param name="endTime">Filter by end time</param>
+            <param name="page">Page number</param>
+            <param name="limit">Page size</param>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetRepayHistoryAsync(System.Nullable{System.Int64},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get stable loan repayment history
+            <para><a href="https://developers.binance.com/docs/crypto_loan/stable-rate/user-information/Get-Loan-Repayment-History" /></para>
             </summary>
             <param name="orderId">Filter by order id</param>
             <param name="loanAsset">Filter by loan asset</param>
@@ -13622,45 +14101,42 @@
         </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetLoanableAssetsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Get interest rate and borrow limit of loanable assets. The borrow limit is shown in USD value.
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-loanable-assets-data-user_data-2" /></para>
+            Get interest rate and borrow limit of loanable assets.
             </summary>
             <param name="loanAsset">Filter by loan asset</param>
-            <param name="vipLevel">Vip level</param>
+            <param name="vipLevel">VIP level filter</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetCollateralAssetsAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Get LTV information and collateral limit of collateral assets. The collateral limit is shown in USD value.
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#get-collateral-assets-data-user_data" /></para>
+            Get LTV information and collateral limit of collateral assets.
             </summary>
             <param name="collateralAsset">Filter by collateral asset</param>
-            <param name="vipLevel">Vip level</param>
+            <param name="vipLevel">VIP level filter</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.GetCollateralRepayRateAsync(System.String,System.String,System.Decimal,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Get the the rate of collateral coin / loan coin when using collateral repay, the rate will be valid within 8 second.
-            <para><a href="https://binance-docs.github.io/apidocs/spot/en/#check-collateral-repay-rate-user_data" /></para>
+            Get the latest rate of collateral coin/loan coin when using collateral repay.
             </summary>
             <param name="loanAsset">Loan asset</param>
             <param name="collateralAsset">Collateral asset</param>
-            <param name="quantity">Quantity</param>
+            <param name="quantity">Repay amount</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
         </member>
         <member name="M:Binance.Net.Interfaces.Clients.GeneralApi.IBinanceRestClientGeneralApiLoans.CustomizeMarginCallAsync(System.Decimal,System.String,System.String,System.Nullable{System.Int64},System.Threading.CancellationToken)">
             <summary>
-            Customize margin call for ongoing orders only.
+            Customize margin call (FULLY RETIRED)
             </summary>
             <param name="marginCall">Margin call value</param>
-            <param name="orderId">Order id. Required if collateralAsset is not send</param>
-            <param name="collateralAsset">Collateral asset. Required if order id is not send</param>
+            <param name="orderId">Order ID filter</param>
+            <param name="collateralAsset">Collateral asset filter</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns></returns>
@@ -16242,7 +16718,7 @@
             <param name="ct">Cancellation token</param>
             <returns>Fee info if computeCommissionRates was set to true, else empty</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceRestClientSpotApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.SelfTradePreventionMode},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.SpotApi.IBinanceRestClientSpotApiTrading.PlaceOrderAsync(System.String,Binance.Net.Enums.OrderSide,Binance.Net.Enums.SpotOrderType,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.TimeInForce},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{Binance.Net.Enums.OrderResponseType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.SelfTradePreventionMode},System.Nullable{Binance.Net.Enums.PegPriceType},System.Nullable{System.Int32},System.Nullable{Binance.Net.Enums.PegOffsetType},System.Nullable{System.Int32},System.Threading.CancellationToken)">
             <summary>
             Places a new order
             <para><a href="https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints" /></para>
@@ -16262,6 +16738,9 @@
             <param name="strategyId">Strategy id</param>
             <param name="strategyType">Strategy type</param>
             <param name="selfTradePreventionMode">Self trade prevention mode</param>
+            <param name="pegPriceType">Peg price type</param>
+            <param name="pegOffsetValue">Peg offset value</param>
+            <param name="pegOffsetType">Peg offset type</param>
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
             <returns>Id's for the placed order</returns>
@@ -18760,6 +19239,14 @@
             <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
             <param name="ct">Cancellation token</param>
         </member>
+        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiAccount.GetAccountInfoV1Async(System.Nullable{System.Int64},System.Threading.CancellationToken)">
+            <summary>
+            Get account information, including position and balances
+            <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/account/websocket-api/Account-Information" /></para>
+            </summary>
+            <param name="receiveWindow">The receive window for which this request is active. When the request takes longer than this to complete the server will reject the request</param>
+            <param name="ct">Cancellation token</param>
+        </member>
         <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiAccount.SubscribeToUserDataUpdatesAsync(System.String,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamConfigUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamMarginUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamAccountUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamOrderUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceFuturesStreamTradeUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.BinanceStreamEvent}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceStrategyUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceGridUpdate}},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Objects.Models.Futures.Socket.BinanceConditionOrderTriggerRejectUpdate}},System.Threading.CancellationToken)">
             <summary>
             Subscribes to the account update stream. Prior to using this, the <see cref="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceRestClientUsdFuturesApiAccount.StartUserStreamAsync(System.Threading.CancellationToken)">restClient.UsdFuturesApi.Account.StartUserStreamAsync</see> method should be called to start the stream and obtaining a listen key.
@@ -18888,7 +19375,7 @@
             <param name="ct">Cancellation token for closing this subscription</param>
             <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbol
             <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
@@ -18897,10 +19384,11 @@
             <param name="interval">The interval of the candlesticks</param>
             <param name="onMessage">The event handler for the received data</param>
             <param name="premiumIndex">Whether you want to subscribe to premium index k-lines</param>
+            <param name="priceIndex">Whether you want to subscribe to price index k-lines</param>
             <param name="ct">Cancellation token for closing this subscription</param>
             <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.String,System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbol and intervals
             <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
@@ -18909,10 +19397,11 @@
             <param name="intervals">The intervals of the candlesticks</param>
             <param name="onMessage">The event handler for the received data</param>
             <param name="premiumIndex">Whether you want to subscribe to premium index k-lines</param>
+            <param name="priceIndex">Whether you want to subscribe to price index k-lines</param>
             <param name="ct">Cancellation token for closing this subscription</param>
             <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},Binance.Net.Enums.KlineInterval,System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbols
             <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
@@ -18921,10 +19410,11 @@
             <param name="interval">The interval of the candlesticks</param>
             <param name="onMessage">The event handler for the received data</param>
             <param name="premiumIndex">Whether you want to subscribe to premium index k-lines</param>
+            <param name="priceIndex">Whether you want to subscribe to price index k-lines</param>
             <param name="ct">Cancellation token for closing this subscription</param>
             <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
         </member>
-        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Threading.CancellationToken)">
+        <member name="M:Binance.Net.Interfaces.Clients.UsdFuturesApi.IBinanceSocketClientUsdFuturesApiExchangeData.SubscribeToKlineUpdatesAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Binance.Net.Enums.KlineInterval},System.Action{CryptoExchange.Net.Objects.Sockets.DataEvent{Binance.Net.Interfaces.IBinanceStreamKlineData}},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
             <summary>
             Subscribes to the candlestick update stream for the provided symbols and intervals
             <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
@@ -18933,6 +19423,7 @@
             <param name="intervals">The intervals of the candlesticks</param>
             <param name="onMessage">The event handler for the received data</param>
             <param name="premiumIndex">Whether you want to subscribe to premium index k-lines</param>
+            <param name="priceIndex">Whether you want to subscribe to price index k-lines</param>
             <param name="ct">Cancellation token for closing this subscription</param>
             <returns>A stream subscription. This stream subscription can be used to be notified when the socket is disconnected/reconnected</returns>
         </member>
@@ -19938,7 +20429,12 @@
             </summary>
             <param name="message"></param>
         </member>
-        <member name="M:Binance.Net.Objects.BinanceRateLimitError.#ctor(System.Nullable{System.Int32},System.String,System.Exception)">
+        <member name="M:Binance.Net.Objects.BinanceRateLimitError.#ctor(System.Int32,System.String)">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Binance.Net.Objects.BinanceRateLimitError.#ctor(CryptoExchange.Net.Objects.Errors.ErrorInfo,System.Exception)">
             <summary>
             ctor
             </summary>
@@ -20351,6 +20847,26 @@
         <member name="P:Binance.Net.Objects.Models.BinanceOrderBase.PreventedMatchQuantity">
             <summary>
             Prevented self trade quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.BinanceOrderBase.PegPriceType">
+            <summary>
+            Peg price type
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.BinanceOrderBase.PegOffsetValue">
+            <summary>
+            Peg offset value
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.BinanceOrderBase.PegOffsetType">
+            <summary>
+            Peg offset type
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.BinanceOrderBase.PeggedPrice">
+            <summary>
+            Pegged price
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.BinanceOrderBookEntry">
@@ -22826,6 +23342,11 @@
             Tax commission rates for trades from the order.
             </summary>
         </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceCommissions.SpecialCommissions">
+            <summary>
+            Special commission rates for trades from the order.
+            </summary>
+        </member>
         <member name="P:Binance.Net.Objects.Models.Spot.BinanceCommissions.Discount">
             <summary>
             Discount commission when paying in BNB
@@ -24595,6 +25116,11 @@
             Whether or not it is allowed to specify the quantity of a market order in the quote asset
             </summary>
         </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceSymbol.PegInstructionsAllowed">
+            <summary>
+            Peg instructions allowed
+            </summary>
+        </member>
         <member name="P:Binance.Net.Objects.Models.Spot.BinanceSymbol.BaseFeePrecision">
             <summary>
             The precision of the base asset fee
@@ -24688,6 +25214,16 @@
         <member name="P:Binance.Net.Objects.Models.Spot.BinanceSymbol.TrailingDeltaFilter">
             <summary>
             Filter for the trailing delta values
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceSymbol.MaxOrderEditsFilter">
+            <summary>
+            Filter for the max number of edits per order
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceSymbol.MaxOrderListsFilter">
+            <summary>
+            Filter for the max order lists
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.BinanceSymbolFilter">
@@ -24940,6 +25476,26 @@
             Maximum number of iceberg orders for this symbol
             </summary>
         </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.BinanceMaxNumberOfOrderAmendsFilter">
+            <summary>
+            Max Order Amends Filter
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceMaxNumberOfOrderAmendsFilter.MaxNumOrderAmends">
+            <summary>
+            Maximum number of order amends for a single order
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.BinanceMaxNumberOfOrderListsFilter">
+            <summary>
+            Max Order Lists Filter
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceMaxNumberOfOrderListsFilter.MaxNumOrderLists">
+            <summary>
+            Maximum number of open order lists
+            </summary>
+        </member>
         <member name="T:Binance.Net.Objects.Models.Spot.BinanceSystemStatus">
             <summary>
             The status of Binance
@@ -24968,6 +25524,11 @@
         <member name="P:Binance.Net.Objects.Models.Spot.BinanceTestOrderCommission.TaxFeeForOrder">
             <summary>
             Tax fee rates on trades from the order
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.BinanceTestOrderCommission.SpecialFeeForOrder">
+            <summary>
+            Special fee rates on trades from the order
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.BinanceTestOrderCommission.Discount">
@@ -26952,6 +27513,116 @@
             Time
             </summary>
         </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.GiftCard.BinaceGiftCardData">
+            <summary>
+            Binance Gift Card data
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinaceGiftCardData.ReferenceNumber">
+            <summary>
+            Reference number
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinaceGiftCardData.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinaceGiftCardData.ExpiredTime">
+            <summary>
+            Expired time
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardRedeemData">
+            <summary>
+            Binance Gift Card redeem data
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardRedeemData.ReferenceNumber">
+            <summary>
+            Reference number
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardRedeemData.IdentityNumber">
+            <summary>
+            Identity Number
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardRedeemData.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardRedeemData.Amount">
+            <summary>
+            Amount
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardResponse`1">
+            <summary>
+            Query results 
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardResponse`1.Code">
+            <summary>
+            Response code
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardResponse`1.Message">
+            <summary>
+            Response message
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardResponse`1.Data">
+            <summary>
+            Response data
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardResponse`1.Success">
+            <summary>
+            Whether the call was successful
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardTokenLimit">
+            <summary>
+            Binance Gift Card token limit data
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardTokenLimit.Coin">
+            <summary>
+            Coin
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardTokenLimit.FromMin">
+            <summary>
+            From min
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardTokenLimit.FromMax">
+            <summary>
+            From max 
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardValidity">
+            <summary>
+            Binance Gift Card validity data
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardValidity.Valid">
+            <summary>
+            Is gift card valid
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardValidity.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.GiftCard.BinanceGiftCardValidity.Amount">
+            <summary>
+            Amount
+            </summary>
+        </member>
         <member name="T:Binance.Net.Objects.Models.Spot.IsolatedMargin.BinanceIsolatedMarginSymbol">
             <summary>
             Isolated margin symbol info
@@ -27177,54 +27848,9 @@
             Loan asset
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.HourlyInterest7Days">
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.InterestRate">
             <summary>
-            Hourly interest rate for 7 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.DailyInterest7Days">
-            <summary>
-            Daily interest rate for 7 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.HourlyInterest14Days">
-            <summary>
-            Hourly interest rate for 14 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.DailyInterest14Days">
-            <summary>
-            Daily interest rate for 14 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.HourlyInterest30Days">
-            <summary>
-            Daily interest rate for 30 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.DailyInterest30Days">
-            <summary>
-            Daily interest rate for 30 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.HourlyInterest90Days">
-            <summary>
-            Daily interest rate for 90 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.DailyInterest90Days">
-            <summary>
-            Daily interest rate for 90 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.HourlyInterest180Days">
-            <summary>
-            Daily interest rate for 180 days
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.DailyInterest180Days">
-            <summary>
-            Daily interest rate for 180 days
+            Interest rate
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.MinLimit">
@@ -27234,12 +27860,7 @@
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.MaxLimit">
             <summary>
-            Min limit
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanAsset.VipLevel">
-            <summary>
-            Vip level
+            Max limit
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanBorrow">
@@ -27267,14 +27888,9 @@
             The collateral quantity
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanBorrow.HourlyInterestRate">
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanBorrow.Status">
             <summary>
-            Hourly interest rate
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanBorrow.OrderId">
-            <summary>
-            Borrow order id
+            Status
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanBorrowRecord">
@@ -27357,9 +27973,114 @@
             Max limit
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanCollateralAsset.VipLevel">
+        <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord">
             <summary>
-            Vip level
+            Borrow record
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.LoanAsset">
+            <summary>
+            The loaning asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.CollateralAsset">
+            <summary>
+            The collateral asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.InitialLoanQuantity">
+            <summary>
+            The loan quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.InitialCollateralQuantity">
+            <summary>
+            The collateral quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.BorrowTime">
+            <summary>
+            Borrow timestamp
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord.Status">
+            <summary>
+            Status of the order
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord">
+            <summary>
+            Ltv adjustment info
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.LoanAsset">
+            <summary>
+            The loaning asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.CollateralAsset">
+            <summary>
+            The collateral asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.Quantity">
+            <summary>
+            Collateral amount
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.PreLtv">
+            <summary>
+            Pre adjust ltv
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.AfterLtv">
+            <summary>
+            Post adjust ltv
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord.AdjustTime">
+            <summary>
+            Adjust time
+            </summary>
+        </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord">
+            <summary>
+            Flexible repay record
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.LoanAsset">
+            <summary>
+            The loaning asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.RepayQuantity">
+            <summary>
+            Repay quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.CollateralAsset">
+            <summary>
+            The collateral asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.CollateralReturn">
+            <summary>
+            Collateral return
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.RepayStatus">
+            <summary>
+            Status of the repay
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord.RepayTime">
+            <summary>
+            Repay timestamp
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanIncome">
@@ -27392,6 +28113,56 @@
             Transaction id
             </summary>
         </member>
+        <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord">
+            <summary>
+            Borrow record
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.LoanAsset">
+            <summary>
+            The loaning asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.Debt">
+            <summary>
+            The liquidation dept
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.CollateralAsset">
+            <summary>
+            The collateral asset
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.CollateralQuantity">
+            <summary>
+            The liquidation collateral quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.returnCollateralQuantity">
+            <summary>
+            The return collateral quantity
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.Fee">
+            <summary>
+            The liquidation fee
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.StartingPrice">
+            <summary>
+            The liquidation starting price
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.StartingTime">
+            <summary>
+            The liquidation starting time
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord.Status">
+            <summary>
+            Status of the order
+            </summary>
+        </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjust">
             <summary>
             Adjust info
@@ -27414,12 +28185,17 @@
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjust.Quantity">
             <summary>
-            Amount
+            Adjustment amount
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjust.CurrentLtv">
             <summary>
             Current ltv
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjust.Status">
+            <summary>
+            Status
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjustRecord">
@@ -27517,29 +28293,14 @@
             The collateral quantity
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanOpenBorrowOrder.OrderId">
-            <summary>
-            Borrow order id
-            </summary>
-        </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanOpenBorrowOrder.TotalDebt">
             <summary>
             Total debt
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanOpenBorrowOrder.ResidualInterest">
-            <summary>
-            Residual interest
-            </summary>
-        </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanOpenBorrowOrder.CurrentLTV">
             <summary>
             Current LTV
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanOpenBorrowOrder.ExpirationTime">
-            <summary>
-            Expiration time
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay">
@@ -27557,19 +28318,9 @@
             The collateral asset
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.CurrentLTV">
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RemainingDebt">
             <summary>
-            Current LTV
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RemainingPrincipal">
-            <summary>
-            Remaining principal
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RepayStatus">
-            <summary>
-            Repay status
+            Remaining debt
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RemainingCollateral">
@@ -27577,9 +28328,19 @@
             Remaining collateral
             </summary>
         </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RemainingInterest">
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.FullRepayment">
             <summary>
-            Remaining interest
+            Fully repaid
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.CurrentLTV">
+            <summary>
+            Current LTV
+            </summary>
+        </member>
+        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepay.RepayStatus">
+            <summary>
+            Repay status
             </summary>
         </member>
         <member name="T:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepayRate">
@@ -27595,11 +28356,6 @@
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepayRate.CollateralAsset">
             <summary>
             Collateral asset
-            </summary>
-        </member>
-        <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepayRate.RepayQuantity">
-            <summary>
-            Repay quantity
             </summary>
         </member>
         <member name="P:Binance.Net.Objects.Models.Spot.Loans.BinanceCryptoLoanRepayRate.Rate">

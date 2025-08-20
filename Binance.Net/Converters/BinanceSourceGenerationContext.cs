@@ -67,6 +67,7 @@ namespace Binance.Net.Converters
     [JsonSerializable(typeof(BinanceResponse<BinanceFuturesOrder>))]
     [JsonSerializable(typeof(BinanceResponse<BinanceFuturesOrder[]>))]
     [JsonSerializable(typeof(BinanceResponse<BinanceCheckTime>))]
+    [JsonSerializable(typeof(BinanceResponse<BinanceFuturesAccountInfo>))]
 
     // End manual defined attributes
 
@@ -415,7 +416,11 @@ namespace Binance.Net.Converters
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanBorrow[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanBorrowRecord[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanCollateralAsset[]))]
+    [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleBorrowRecord[]))]
+    [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleLtvAdjustRecord[]))]
+    [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanFlexibleRepayRecord[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanIncome[]))]
+    [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanLiquidationRecord[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjust[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanLtvAdjustRecord[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.Loans.BinanceCryptoLoanMarginCallResult[]))]
