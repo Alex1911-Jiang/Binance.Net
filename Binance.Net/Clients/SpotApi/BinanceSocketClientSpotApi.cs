@@ -43,7 +43,9 @@ namespace Binance.Net.Clients.SpotApi
             "listStatus",
             "listenKeyExpired",
             "eventStreamTerminated",
-            "externalLockUpdate"
+            "externalLockUpdate",
+            "MARGIN_LEVEL_STATUS_CHANGE",
+            "USER_LIABILITY_CHANGE"
         };
         #endregion
 
@@ -139,6 +141,52 @@ namespace Binance.Net.Clients.SpotApi
             };
 
             var query = new BinanceSpotQuery<BinanceResponse<T>>(this, request, false, weight);
+            var result = await QueryAsync(url, query, ct).ConfigureAwait(false);
+            if (!result.Success && result.Error is BinanceRateLimitError rle)
+            {
+                if (rle.RetryAfter != null && RateLimiter != null && ClientOptions.RateLimiterEnabled)
+                {
+                    _logger.LogWarning("Ratelimit error from server, pausing requests until {Until}", rle.RetryAfter.Value);
+                    await RateLimiter.SetRetryAfterGuardAsync(rle.RetryAfter.Value).ConfigureAwait(false);
+                }
+            }
+
+            return result;
+        }
+
+        internal async Task<CallResult<BinanceResponse<T>>> QueryAsync<T>(
+            string url,
+            string method,
+            Dictionary<string, object> parameters,
+            Func<BinanceSocketClientSpotApi, BinanceSocketQuery, Query<BinanceResponse<T>>> queryFactory,
+            bool authenticated = false,
+            bool sign = false,
+            CancellationToken ct = default)
+        {
+            if (authenticated)
+            {
+                if (AuthenticationProvider == null)
+                    throw new InvalidOperationException("No credentials provided for authenticated endpoint");
+
+                var authProvider = (BinanceAuthenticationProvider)AuthenticationProvider;
+                if (sign)
+                {
+                    parameters = authProvider.AuthenticateSocketParameters(parameters);
+                }
+                else
+                {
+                    parameters.Add("apiKey", authProvider.ApiKey);
+                }
+            }
+
+            var request = new BinanceSocketQuery
+            {
+                Method = method,
+                Params = parameters,
+                Id = ExchangeHelpers.NextId()
+            };
+
+            var query = queryFactory(this, request);
             var result = await QueryAsync(url, query, ct).ConfigureAwait(false);
             if (!result.Success && result.Error is BinanceRateLimitError rle)
             {

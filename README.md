@@ -195,6 +195,27 @@ Make a one time donation in a crypto currency of your choice. If you prefer to d
 Alternatively, sponsor me on Github using [Github Sponsors](https://github.com/sponsors/JKorf). 
 
 ## Release notes
+* Version 11.7.0 - 01 Sep 2025
+    * Updated CryptoExchange.Net version to 9.7.0, see https://github.com/JKorf/CryptoExchange.Net/releases/
+    * HTTP REST requests will now use HTTP version 2.0 by default
+    * Added idList parameter to restClient.SpotApi.Account.GetWithdrawalHistoryAsync endpoint
+    * Added missing OrderRejectReason enum values
+    * Updated socketClient.SpotApi.Trading.ReplaceOrderAsync response checking
+    * Updated SimpleEarn API to latest docs
+    * Fixed Shared spot order status getting reported as filled while actually expired
+
+* Version 11.6.0 - 25 Aug 2025
+    * Updated CryptoExchange.Net version to 9.6.0, see https://github.com/JKorf/CryptoExchange.Net/releases/
+    * Added ClearUserClients method to user client provider
+    * Added PreMarket value to UnderlyingType Enum
+    * Added socketClient.SpotApi.Account.SubscribeToUserRiskDataUpdatesAsync subscription and listenkey endpoints
+    * Added VIP Loan Endpoints (Full Support)
+    * Updated restClient.SpotApi.Trading.ReplaceOrderAsync response checking
+    * Fixed Gift Card API deserialization error
+
+* Version 11.5.1 - 21 Aug 2025
+    * Added Invalid api key error mapping
+
 * Version 11.5.0 - 20 Aug 2025
     * Updated CryptoExchange.Net to version 9.5.0, see https://github.com/JKorf/CryptoExchange.Net/releases/
     * Added improved error parsing
