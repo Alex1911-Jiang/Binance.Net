@@ -190,7 +190,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
                 return new ExchangeResult<UpdateSubscription>(Exchange, validationError);
 
             var result = await Account.SubscribeToUserDataUpdatesAsync(request.ListenKey!,
-                onAccountUpdate: update => handler(update.AsExchangeEvent(Exchange, update.Data.UpdateData.Positions.Select(x => new SharedPosition(ExchangeSymbolCache.ParseSymbol(_topicId, x.Symbol), x.Symbol, x.Quantity, update.Data.EventTime)
+                onAccountUpdate: update => handler(update.AsExchangeEvent(Exchange, update.Data.UpdateData.Positions.Select(x => new SharedPosition(ExchangeSymbolCache.ParseSymbol(_topicId, x.Symbol), x.Symbol, Math.Abs(x.Quantity), update.Data.EventTime)
                 {
                     AverageOpenPrice = x.EntryPrice,
                     PositionSide = x.PositionSide == Enums.PositionSide.Both ? (x.Quantity >= 0 ? SharedPositionSide.Long : SharedPositionSide.Short) : x.PositionSide == Enums.PositionSide.Short ? SharedPositionSide.Short : SharedPositionSide.Long,
@@ -246,6 +246,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
                         IsCloseOrder = update.Data.UpdateData.IsClosePositionOrder,
                         LastTrade = update.Data.UpdateData.QuantityOfLastFilledTrade == 0 ? null : new SharedUserTrade(ExchangeSymbolCache.ParseSymbol(_topicId, update.Data.UpdateData.Symbol), update.Data.UpdateData.Symbol, update.Data.UpdateData.OrderId.ToString(), update.Data.UpdateData.TradeId.ToString(), update.Data.UpdateData.Side == Enums.OrderSide.Buy ? SharedOrderSide.Buy : SharedOrderSide.Sell, update.Data.UpdateData.QuantityOfLastFilledTrade, update.Data.UpdateData.PriceLastFilledTrade, update.Data.UpdateData.UpdateTime)
                         {
+                            ClientOrderId = update.Data.UpdateData.ClientOrderId,
                             Role = update.Data.UpdateData.BuyerIsMaker ? SharedRole.Maker : SharedRole.Taker
                         }
                     }
