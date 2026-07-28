@@ -1,4 +1,4 @@
-﻿using Binance.Net.Enums;
+using Binance.Net.Enums;
 using Binance.Net.Objects.Models.Futures.Socket;
 using Binance.Net.Objects.Models.Spot.Socket;
 using CryptoExchange.Net.Objects.Sockets;
@@ -14,7 +14,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the aggregated trades update stream for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
         /// Endpoint:<br />
         /// @aggTrade
         /// </para>
@@ -29,7 +29,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the aggregated trades update stream for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
         /// Endpoint:<br />
         /// @aggTrade
         /// </para>
@@ -45,7 +45,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Aggregate-Trade-Streams" /><br />
         /// Endpoint:<br />
         /// @aggTrade
         /// </para>
@@ -90,7 +90,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the candlestick update stream for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @kline_&lt;interval&gt;
         /// </para>
@@ -106,7 +106,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the candlestick update stream for the provided symbol and intervals
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @kline_&lt;interval&gt;
         /// </para>
@@ -122,7 +122,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the candlestick update stream for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @kline_&lt;interval&gt;
         /// </para>
@@ -138,7 +138,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the candlestick update stream for the provided symbols and intervals
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @kline_&lt;interval&gt;
         /// </para>
@@ -154,7 +154,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to mini ticker updates stream for a specific symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
         /// Endpoint:<br />
         /// @miniTicker
         /// </para>
@@ -169,7 +169,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to mini ticker updates stream for a list of symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
         /// Endpoint:<br />
         /// @miniTicker
         /// </para>
@@ -185,7 +185,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /><br />
         /// Endpoint:<br />
         /// @miniTicker
         /// </para>
@@ -200,7 +200,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to mini ticker updates stream for all symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream" /><br />
         /// Endpoint:<br />
         /// !miniTicker@arr
         /// </para>
@@ -214,7 +214,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to ticker updates stream for a specific symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /><br />
         /// Endpoint:<br />
         /// @ticker
         /// </para>
@@ -229,7 +229,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to ticker updates stream for a specific symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /><br />
         /// Endpoint:<br />
         /// @ticker
         /// </para>
@@ -244,7 +244,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to ticker updates stream for all symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://binance-docs.github.io/apidocs/delivery/en/#all-market-tickers-streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/All-Market-Tickers-Streams" /><br />
         /// Endpoint:<br />
         /// !ticker@arr
         /// </para>
@@ -258,7 +258,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to all book ticker update streams
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Tickers-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/All-Market-Tickers-Streams" /><br />
         /// Endpoint:<br />
         /// !bookTicker
         /// </para>
@@ -272,7 +272,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the book ticker update stream for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
         /// Endpoint:<br />
         /// @bookTicker
         /// </para>
@@ -287,7 +287,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the book ticker update stream for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
         /// Endpoint:<br />
         /// @bookTicker
         /// </para>
@@ -302,7 +302,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /><br />
         /// Endpoint:<br />
         /// @bookTicker
         /// </para>
@@ -317,7 +317,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to specific symbol forced liquidations stream
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Liquidation-Order-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Liquidation-Order-Streams" /><br />
         /// Endpoint:<br />
         /// @forceOrder
         /// </para>
@@ -332,7 +332,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to a list of symbol forced liquidation streams
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Liquidation-Order-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Liquidation-Order-Streams" /><br />
         /// Endpoint:<br />
         /// @forceOrder
         /// </para>
@@ -347,7 +347,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to all forced liquidations stream
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Liquidation-Order-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/All-Market-Liquidation-Order-Streams" /><br />
         /// Endpoint:<br />
         /// !forceOrder@arr
         /// </para>
@@ -361,7 +361,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the depth updates for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth&lt;levels&gt;
         /// </para>
@@ -378,7 +378,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the depth updates for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth&lt;levels&gt;
         /// </para>
@@ -395,7 +395,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Partial-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth&lt;levels&gt;
         /// </para>
@@ -412,7 +412,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the order book updates for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth
         /// </para>
@@ -428,7 +428,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the depth update stream for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth
         /// </para>
@@ -444,7 +444,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Diff-Book-Depth-Streams" /><br />
         /// Endpoint:<br />
         /// @depth
         /// </para>
@@ -460,7 +460,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the Index price update stream for a single pair
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Index-Price-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Index-Price-Stream" /><br />
         /// Endpoint:<br />
         /// @indexPrice
         /// </para>
@@ -476,7 +476,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the Index price update stream for a list of pairs
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Index-Price-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Index-Price-Stream" /><br />
         /// Endpoint:<br />
         /// @indexPrice
         /// </para>
@@ -492,7 +492,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the Mark price update stream for a single symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Mark-Price-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Mark-Price-Stream" /><br />
         /// Endpoint:<br />
         /// @markPrice
         /// </para>
@@ -508,7 +508,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the mark price update stream for all symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Mark-Price-of-All-Symbols-of-a-Pair" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Mark-Price-of-All-Symbols-of-a-Pair" /><br />
         /// Endpoint:<br />
         /// !markPrice@arr
         /// </para>
@@ -523,7 +523,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the Mark price update stream for a list of symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Mark-Price-of-All-Symbols-of-a-Pair" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Mark-Price-of-All-Symbols-of-a-Pair" /><br />
         /// Endpoint:<br />
         /// @markPrice
         /// </para>
@@ -539,7 +539,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the continuous contract candlestick update stream for the provided pair
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @continuousKline_&lt;interval&gt;
         /// </para>
@@ -556,7 +556,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the continuous contract candlestick update stream for the provided pairs
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @continuousKline_&lt;interval&gt;
         /// </para>
@@ -573,7 +573,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the index candlestick update stream for the provided pair
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Index-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Index-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @indexPriceKline_&lt;interval&gt;
         /// </para>
@@ -589,7 +589,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the index candlestick update stream for the provided pairs
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Index-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Index-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @indexPriceKline_&lt;interval&gt;
         /// </para>
@@ -605,7 +605,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the mark price candlestick update stream for the provided symbol
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Mark-Price-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Mark-Price-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @markPriceKline_&lt;interval&gt;
         /// </para>
@@ -621,7 +621,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the mark price candlestick update stream for the provided symbols
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Mark-Price-Kline-Candlestick-Streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Mark-Price-Kline-Candlestick-Streams" /><br />
         /// Endpoint:<br />
         /// @markPriceKline_&lt;interval&gt;
         /// </para>
@@ -637,7 +637,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to contract/symbol updates
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Contract-Info-Stream" /><br />
+        /// <a href="https://developers.binance.com/en/docs/products/derivatives-trading-coin-futures/websocket-market-streams/Contract-Info-Stream" /><br />
         /// Endpoint:<br />
         /// !contractInfo
         /// </para>

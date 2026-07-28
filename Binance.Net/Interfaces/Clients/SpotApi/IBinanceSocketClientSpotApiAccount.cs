@@ -1,4 +1,4 @@
-﻿using Binance.Net.Objects;
+using Binance.Net.Objects;
 using Binance.Net.Objects.Models;
 using Binance.Net.Objects.Models.Spot;
 using Binance.Net.Objects.Models.Spot.Margin;
@@ -15,7 +15,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
     {
         /// <summary>
         /// Gets account information, including balances
-        /// <para><a href="https://developers.binance.com/docs/binance-spot-api-docs/websocket-api/account-requests" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/ws-api/account#account-information" /></para>
         /// </summary>
         /// <param name="omitZeroBalances">When true only return non-zero balances in the account</param>
         /// <param name="ct">Cancellation token</param>
@@ -24,7 +24,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Gets order rate limit status
-        /// <para><a href="https://developers.binance.com/docs/binance-spot-api-docs/websocket-api/account-requests#unfilled-order-count-user_data" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/ws-api/account#unfilled-order-count" /></para>
         /// </summary>
         /// <param name="symbols">Filter by symbols, for example `ETHUSDT`</param>
         /// <param name="ct">Cancellation token</param>
@@ -33,7 +33,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Subscribes to the account update stream
-        /// <para><a href="https://developers.binance.com/docs/binance-spot-api-docs/user-data-stream#web-socket-payloads" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/spot/user-data-stream#websocket-payloads" /></para>
         /// </summary>
         /// <param name="onOrderUpdateMessage">The event handler for whenever an order status update is received</param>
         /// <param name="onOcoOrderUpdateMessage">The event handler for whenever an OCO order status update is received</param>
@@ -54,7 +54,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Subscribes to the cross margin account update stream, listen key is internally managed and automatically renewed
-        /// <para><a href="https://developers.binance.com/docs/margin_trading/trade-data-stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/margin-trading/trade-data-stream" /></para>
         /// </summary>
         /// <param name="onOrderUpdateMessage">The event handler for whenever an order status update is received</param>
         /// <param name="onOcoOrderUpdateMessage">The event handler for whenever an OCO order status update is received</param>
@@ -73,7 +73,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Subscribes to the cross margin account update stream using a listen token
-        /// <para><a href="https://developers.binance.com/docs/margin_trading/trade-data-stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/margin-trading/trade-data-stream" /></para>
         /// </summary>
         /// <param name="listenToken">The listen token obtained from <see cref="IBinanceRestClientSpotApiAccount.GetMarginUserListenTokenAsync(string?, TimeSpan?, CancellationToken)">GetMarginUserListenTokenAsync</see></param>
         /// <param name="onOrderUpdateMessage">The event handler for whenever an order status update is received</param>
@@ -120,7 +120,7 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
 
         /// <summary>
         /// Seamlessly renews the margin user data stream listen token on the existing connection without disconnecting. Call every ~12 hours before expiry.
-        /// <para><a href="https://developers.binance.com/docs/margin_trading/trade-data-stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/margin-trading/trade-data-stream" /></para>
         /// </summary>
         /// <param name="newListenToken">Listen token retrieved by the <see cref="IBinanceRestClientSpotApiAccount.GetMarginUserListenTokenAsync(string?, TimeSpan?, CancellationToken)">GetMarginUserListenTokenAsync</see> method</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>

@@ -1,4 +1,4 @@
-﻿using Binance.Net.Objects;
+using Binance.Net.Objects;
 using Binance.Net.Objects.Models;
 using Binance.Net.Objects.Models.Futures;
 using Binance.Net.Objects.Models.Futures.Socket;
@@ -15,7 +15,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Gets account balances
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/account/websocket-api" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/account#futures-account-balance" /><br />
         /// Endpoint:<br />
         /// account.balance
         /// </para>
@@ -29,7 +29,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Gets account information, including positions and balances
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/account/websocket-api/Account-Information" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/account#account-information" /><br />
         /// Endpoint:<br />
         /// account.status
         /// </para>
@@ -43,7 +43,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the account update stream. Listen key is initially requested and kept alive when needed
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/user-data-streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/user-data-streams" /><br />
         /// Endpoint:<br />
         /// listenKey
         /// </para>
@@ -71,7 +71,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Subscribes to the account update stream. Before using this method, call <see cref="IBinanceRestClientCoinFuturesApiAccount.StartUserStreamAsync(CancellationToken)">restClient.CoinFuturesApi.Account.StartUserStreamAsync</see> to start the stream and obtain a listen key.
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/user-data-streams" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/rest-api/user-data-streams" /><br />
         /// Endpoint:<br />
         /// listenKey
         /// </para>

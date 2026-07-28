@@ -15,7 +15,7 @@ namespace Binance.Net.Objects.Models
 
     /// <summary>
     /// Represents the binance result for combined data on a single socket connection
-    /// See on https://github.com/binance-exchange/binance-official-api-docs/blob/master/web-socket-streams.md
+    /// See on https://developers.binance.com/en/docs/catalog/core-trading-spot-trading/api/ws-streams/~
     /// Combined streams
     /// </summary>
     /// <typeparam name="T"></typeparam>

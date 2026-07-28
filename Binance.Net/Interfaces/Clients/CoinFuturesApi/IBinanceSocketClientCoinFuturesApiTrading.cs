@@ -1,4 +1,4 @@
-﻿using Binance.Net.Enums;
+using Binance.Net.Enums;
 using Binance.Net.Objects;
 using Binance.Net.Objects.Models.Futures;
 
@@ -13,7 +13,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Places a new order
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/trade#new-order" /><br />
         /// Endpoint:<br />
         /// order.place
         /// </para>
@@ -28,10 +28,10 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// <param name="price">The price to use</param>
         /// <param name="newClientOrderId">Unique id for order</param>
         /// <param name="stopPrice">Used for stop orders</param>
-        /// <param name="activationPrice">Used with TRAILING_STOP_MARKET orders, default as the latest price（supporting different workingType)</param>
+        /// <param name="activationPrice">Used with TRAILING_STOP_MARKET orders, default as the latest price(supporting different workingType)</param>
         /// <param name="callbackRate">Used with TRAILING_STOP_MARKET orders</param>
         /// <param name="workingType">stopPrice triggered by: "MARK_PRICE", "CONTRACT_PRICE"</param>
-        /// <param name="closePosition">Close-All，used with STOP_MARKET or TAKE_PROFIT_MARKET.</param>
+        /// <param name="closePosition">Close-All,used with STOP_MARKET or TAKE_PROFIT_MARKET.</param>
         /// <param name="orderResponseType">The response type. Default Acknowledge</param>
         /// <param name="priceProtect">If true when price reaches stopPrice, difference between "MARK_PRICE" and "CONTRACT_PRICE" cannot be larger than "triggerProtect" of the symbol.</param>
         /// <param name="priceMatch">Only available for Limit/Stop/TakeProfit order</param>
@@ -64,7 +64,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Edits an existing order
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api/Modify-Order" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/trade#modify-order" /><br />
         /// Endpoint:<br />
         /// order.modify
         /// </para>
@@ -85,7 +85,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Cancels a pending order
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Cancel-Order" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/trade#cancel-order" /><br />
         /// Endpoint:<br />
         /// order.cancel
         /// </para>
@@ -102,7 +102,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Retrieves data for a specific order. Either orderId or origClientOrderId should be provided.
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Query-Order" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/trade#query-order" /><br />
         /// Endpoint:<br />
         /// order.status
         /// </para>
@@ -119,7 +119,7 @@ namespace Binance.Net.Interfaces.Clients.CoinFuturesApi
         /// Gets position information
         /// <para>
         /// Docs:<br />
-        /// <a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Position-Info-V2" /><br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-coin-m-futures/api/ws-api/trade#position-information" /><br />
         /// Endpoint:<br />
         /// account.position
         /// </para>

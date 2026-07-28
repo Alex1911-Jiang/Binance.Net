@@ -1,4 +1,4 @@
-﻿using Binance.Net.Enums;
+using Binance.Net.Enums;
 using Binance.Net.Objects;
 using Binance.Net.Objects.Models.Futures;
 using Binance.Net.Objects.Models.Futures.Socket;
@@ -15,7 +15,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
     {
         /// <summary>
         /// Gets the order book for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-api/market#order-book" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get the order book for, for example `ETHUSDT`</param>
         /// <param name="limit">Max number of results</param>
@@ -25,7 +25,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Gets the price of a symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api/Symbol-Price-Ticker" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-api/market#symbol-price-ticker" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to get the price for, for example `ETHUSDT`</param>
         /// <param name="ct">Cancellation token</param>
@@ -34,7 +34,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Gets the price of all symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api/Symbol-Price-Ticker" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-api/market#symbol-price-ticker" /></para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns>Price for all symbols</returns>
@@ -42,7 +42,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Gets the best price/quantity on the order book for a symbol.
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api/Symbol-Order-Book-Ticker" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-api/market#symbol-order-book-ticker" /></para>
         /// </summary>
         /// <param name="symbol">Symbol to get book price for, for example `ETHUSDT`</param>
         /// <param name="ct">Cancellation token</param>
@@ -51,7 +51,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Gets the best price/quantity on the order book for all symbols.
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api/Symbol-Order-Book-Ticker" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-api/market#symbol-order-book-ticker" /></para>
         /// </summary>
         /// <param name="ct">Cancellation token</param>
         /// <returns>List of book prices</returns>
@@ -59,7 +59,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the aggregated trades update stream for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -69,7 +69,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to the aggregated trade update stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -110,7 +110,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the aggregated trades update stream for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Aggregate-Trade-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -120,7 +120,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the Mark price update stream for a single symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Mark-Price-Stream" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="updateInterval">Update interval in milliseconds, either 1000 or 3000. Defaults to 3000</param>
@@ -131,7 +131,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the Mark price update stream for a list of symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Mark-Price-Stream" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="updateInterval">Update interval in milliseconds, either 1000 or 3000. Defaults to 3000</param>
@@ -142,7 +142,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the candlestick update stream for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="interval">The interval of the candlesticks</param>
@@ -155,7 +155,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the candlestick update stream for the provided symbol and intervals
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="intervals">The intervals of the candlesticks</param>
@@ -168,7 +168,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the candlestick update stream for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="interval">The interval of the candlesticks</param>
@@ -181,7 +181,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the candlestick update stream for the provided symbols and intervals
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="intervals">The intervals of the candlesticks</param>
@@ -194,7 +194,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the continuous contract candlestick update stream for the provided pair
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="pair">The pair, for example `ETHUSDT`</param>
         /// <param name="contractType">The contract type</param>
@@ -206,7 +206,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the continuous contract candlestick update stream for the provided pairs
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Continuous-Contract-Kline-Candlestick-Streams" /></para>
         /// </summary>
         /// <param name="pairs">The pairs, for example `ETHUSDT`</param>
         /// <param name="contractType">The contract type</param>
@@ -218,7 +218,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to mini ticker updates stream for a specific symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to subscribe to, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -228,7 +228,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to mini ticker updates stream for a list of symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
         /// </summary>
         /// <param name="symbols">The symbols to subscribe to, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -239,7 +239,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to mini ticker updates stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Mini-Ticker-Stream" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -249,7 +249,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to mini ticker updates stream for all symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -258,7 +258,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to ticker updates stream for a specific symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to subscribe to, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -268,7 +268,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to ticker updates stream for a specific symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols to subscribe to, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -278,7 +278,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to ticker updates stream for all symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Tickers-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/All-Market-Tickers-Streams" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -287,7 +287,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to all book ticker update streams
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Book-Tickers-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/All-Book-Tickers-Stream" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -296,7 +296,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the book ticker update stream for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -306,7 +306,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the book ticker update stream for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -316,7 +316,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to the book ticker update stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Individual-Symbol-Book-Ticker-Streams" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -326,7 +326,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to specific symbol forced liquidations stream
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Liquidation-Order-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Liquidation-Order-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -336,7 +336,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to a list of symbol forced liquidation streams
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Liquidation-Order-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Liquidation-Order-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -346,7 +346,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to all forced liquidations stream
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Liquidation-Order-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/All-Market-Liquidation-Order-Streams" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -355,7 +355,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the depth updates for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to subscribe on, for example `ETHUSDT`</param>
         /// <param name="levels">The amount of entries to be returned in the update, 5, 10 or 20</param>
@@ -367,7 +367,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the depth updates for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols to subscribe on, for example `ETHUSDT`</param>
         /// <param name="levels">The amount of entries to be returned in the update of each symbol</param>
@@ -380,7 +380,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to the depth updates stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Partial-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="levels">The amount of entries to be returned in the update of each symbol</param>
@@ -392,7 +392,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the RPI (Retail Price Improvement) depth updates for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to subscribe on, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -402,7 +402,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the RPI (Retail Price Improvement) depth updates for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
         /// </summary>
         /// <param name="symbols">The symbols to subscribe on, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -413,7 +413,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to the RPI (Retail Price Improvement) depth updates stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams-RPI" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -423,7 +423,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the order book updates for the provided symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="updateInterval">Update interval in milliseconds, either 0 or 100, 500 or 1000, depending on endpoint</param>
@@ -434,7 +434,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the depth update stream for the provided symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbols">The symbols, for example `ETHUSDT`</param>
         /// <param name="updateInterval">Update interval in milliseconds, either 0 or 100, 500 or 1000, depending on endpoint</param>
@@ -445,7 +445,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
         /// <summary>
         /// Subscribes to the depth update stream in high-performance mode<br />
         /// More info about high-performance mode can be found here: <a href="https://cryptoexchange.jkorf.dev/client-libs/features/performance" />
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Diff-Book-Depth-Streams" /></para>
         /// </summary>
         /// <param name="symbols">Symbols to subscribe</param>
         /// <param name="updateInterval">Update interval in milliseconds, either 100 or 1000</param>
@@ -456,7 +456,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to contract/symbol updates
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Contract-Info-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Contract-Info-Stream" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -465,7 +465,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to the mark price update stream for all symbols
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream-for-All-market" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Mark-Price-Stream-for-All-market" /></para>
         /// </summary>
         /// <param name="updateInterval">Update interval in milliseconds, either 1000 or 3000. Defaults to 3000</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -475,7 +475,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to composite index updates stream for a symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Composite-Index-Symbol-Information-Streams" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Composite-Index-Symbol-Information-Streams" /></para>
         /// </summary>
         /// <param name="symbol">The symbol to subscribe, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -486,7 +486,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to asset index updates stream
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Multi-Assets-Mode-Asset-Index" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Multi-Assets-Mode-Asset-Index" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
@@ -495,7 +495,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to asset index updates for a single symbol
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Multi-Assets-Mode-Asset-Index" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Multi-Assets-Mode-Asset-Index" /></para>
         /// </summary>
         /// <param name="symbol">The symbol, for example `ETHUSDT`</param>
         /// <param name="onMessage">The event handler for the received data</param>
@@ -505,7 +505,7 @@ namespace Binance.Net.Interfaces.Clients.UsdFuturesApi
 
         /// <summary>
         /// Subscribes to TradFi trading session updates
-        /// <para><a href="https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Trading-Session-Stream" /></para>
+        /// <para><a href="https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/websocket-market-streams/Trading-Session-Stream" /></para>
         /// </summary>
         /// <param name="onMessage">The event handler for the received data</param>
         /// <param name="ct">Cancellation token for closing this subscription</param>
