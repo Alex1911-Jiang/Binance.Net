@@ -106,6 +106,7 @@ namespace Binance.Net
                 symbol,
                 limit,
                 period,
+                TradeQuantityType.BaseAsset,
                 exchangeParameters
                 );
         }

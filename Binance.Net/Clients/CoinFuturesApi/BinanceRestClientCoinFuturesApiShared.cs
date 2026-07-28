@@ -76,7 +76,15 @@ namespace Binance.Net.Clients.CoinFuturesApi
             // Return
             return HttpResult.Ok(result, ExchangeHelpers.ApplyFilter(result.Data, x => x.OpenTime, request.StartTime, request.EndTime, direction)
                     .Select(x =>
-                        new SharedKline(request.Symbol, symbol, x.OpenTime, x.ClosePrice, x.HighPrice, x.LowPrice, x.OpenPrice, x.Volume))
+                        new SharedKline(
+                            request.Symbol,
+                            symbol, 
+                            x.OpenTime,
+                            x.ClosePrice, 
+                            x.HighPrice, 
+                            x.LowPrice,
+                            x.OpenPrice,
+                            new SharedOrderQuantity(x.Volume, x.QuoteVolume)))
                     .ToArray(), nextPageRequest);
 
         }
@@ -252,7 +260,13 @@ namespace Binance.Net.Clients.CoinFuturesApi
                 return HttpResult.Fail<SharedFuturesTicker>(Exchange, new ServerError(new ErrorInfo(ErrorType.UnknownSymbol, false, "Symbol not found")));
 
             return HttpResult.Ok(resultTicker.Result, new SharedFuturesTicker(
-                ExchangeSymbolCache.ParseSymbol(_topicId, EnvironmentName, null, ticker.Symbol), ticker.Symbol, ticker.LastPrice, ticker.HighPrice, ticker.LowPrice, ticker.Volume, ticker.PriceChangePercent)
+                ExchangeSymbolCache.ParseSymbol(_topicId, EnvironmentName, null, ticker.Symbol),
+                ticker.Symbol,
+                ticker.LastPrice,
+                ticker.HighPrice,
+                ticker.LowPrice,
+                new SharedOrderQuantity(ticker.Volume, ticker.QuoteVolume),
+                ticker.PriceChangePercent)
             {
                 IndexPrice = mark.IndexPrice,
                 MarkPrice = mark.MarkPrice,
@@ -284,7 +298,14 @@ namespace Binance.Net.Clients.CoinFuturesApi
             return HttpResult.Ok(resultTickers.Result, data.Select(x =>
             {
                 var markPrice = resultMarkPrices.Result.Data.Single(p => p.Symbol == x.Symbol);
-                return new SharedFuturesTicker(ExchangeSymbolCache.ParseSymbol(_topicId, EnvironmentName, null, x.Symbol), x.Symbol, x.LastPrice, x.HighPrice, x.LowPrice, x.Volume, x.PriceChangePercent)
+                return new SharedFuturesTicker(
+                    ExchangeSymbolCache.ParseSymbol(_topicId, EnvironmentName, null, x.Symbol),
+                    x.Symbol,
+                    x.LastPrice,
+                    x.HighPrice,
+                    x.LowPrice,
+                    new SharedOrderQuantity(x.Volume, x.QuoteVolume),
+                    x.PriceChangePercent)
                 {
                     IndexPrice = markPrice.IndexPrice,
                     MarkPrice = markPrice.MarkPrice,
@@ -315,7 +336,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
                 return HttpResult.Fail<SharedTrade[]>(result);
 
             return HttpResult.Ok(result, result.Data.Select(x =>
-            new SharedTrade(request.Symbol, symbol, x.BaseQuantity, x.Price, x.TradeTime)
+            new SharedTrade(request.Symbol, symbol, new SharedOrderQuantity(x.BaseQuantity, x.QuoteQuantity), x.Price, x.TradeTime)
             {
                 Side = x.BuyerIsMaker ? SharedOrderSide.Sell : SharedOrderSide.Buy,
             }).ToArray());
@@ -927,7 +948,7 @@ namespace Binance.Net.Clients.CoinFuturesApi
             // Return
             return HttpResult.Ok(result, ExchangeHelpers.ApplyFilter(result.Data, x => x.TradeTime, request.StartTime, request.EndTime, direction)
                     .Select(x =>
-                        new SharedTrade(request.Symbol, symbol, x.Quantity, x.Price, x.TradeTime)
+                        new SharedTrade(request.Symbol, symbol, new SharedOrderQuantity(x.Quantity), x.Price, x.TradeTime)
                         {
                             Side = x.BuyerIsMaker ? SharedOrderSide.Sell : SharedOrderSide.Buy,
                         }).ToArray(), nextPageRequest);
