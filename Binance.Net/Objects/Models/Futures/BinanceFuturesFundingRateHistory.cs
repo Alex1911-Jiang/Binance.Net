@@ -27,6 +27,11 @@ namespace Binance.Net.Objects.Models.Futures
         /// </summary>
         [JsonPropertyName("markPrice")]
         public decimal? MarkPrice { get; set; }
+        /// <summary>
+        /// ["<c>rateType</c>"] The type of the rate
+        /// </summary>
+        [JsonPropertyName("rateType")]
+        public string? RateType { get; set; }
     }
 }
 
