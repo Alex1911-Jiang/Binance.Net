@@ -35,6 +35,11 @@ namespace Binance.Net.Objects.Models.Futures.Socket
         /// </summary>
         [JsonPropertyName("m")]
         public AccountUpdateReason Reason { get; set; }
+        /// <summary>
+        /// ["<c>S</c>"] The symbol this update is for, only filled for funding rate updates
+        /// </summary>
+        [JsonPropertyName("S")]
+        public string? Symbol { get; set; }
 
         /// <summary>
         /// ["<c>B</c>"] Balances
