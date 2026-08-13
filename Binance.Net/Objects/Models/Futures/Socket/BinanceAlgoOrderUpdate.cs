@@ -164,6 +164,11 @@ namespace Binance.Net.Objects.Models.Futures.Socket
         /// </summary>
         [JsonPropertyName("tt"), JsonConverter(typeof(DateTimeConverter))]
         public DateTime? TriggerTime { get; set; }
+        /// <summary>
+        /// ["<c>ai</c>"] Whether the algo order was activated (only for trailing stop orders)
+        /// </summary>
+        [JsonPropertyName("ai")]
+        public bool? Activated { get; set; }
     }
 }
 
