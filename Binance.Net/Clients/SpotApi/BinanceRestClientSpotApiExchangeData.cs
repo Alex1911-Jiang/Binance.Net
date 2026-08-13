@@ -773,5 +773,18 @@ namespace Binance.Net.Clients.SpotApi
 
         #endregion
 
+        #region Get Asset Tags
+
+        /// <inheritdoc />
+        public async Task<HttpResult<BinanceAssetTags[]>> GetAssetTagsAsync(string? tag = null, CancellationToken ct = default)
+        {
+            var parameters = new Parameters(BinanceExchange._parameterSerializationSettings);
+            parameters.Add("tag", tag);
+            var request = _definitions.GetOrCreate(HttpMethod.Get, _baseClient.BaseAddress, "/sapi/v1/spot/asset/tags", BinanceExchange.RateLimiter.SpotRestIp, 100, true);
+            var result = await _baseClient.SendAsync<BinanceAssetTags[]>(request, parameters, ct).ConfigureAwait(false);
+            return result;
+        }
+
+        #endregion
     }
 }

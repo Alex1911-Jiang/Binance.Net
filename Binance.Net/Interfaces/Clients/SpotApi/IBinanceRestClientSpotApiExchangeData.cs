@@ -721,6 +721,19 @@ namespace Binance.Net.Interfaces.Clients.SpotApi
         /// <param name="ct">Cancellation token</param>
         Task<HttpResult<BinanceReferencePriceCalculation>> GetReferencePriceCalculationAsync(string symbol, SymbolStatus? symbolStatus = null, CancellationToken ct = default);
 
+        /// <summary>
+        /// Get asset tags (requires authentication)
+        /// <para>
+        /// Docs:<br />
+        /// <a href="https://developers.binance.com/en/docs/catalog/core-trading-wallet/api/rest-api/asset#get-spot-asset-tags" /><br />
+        /// Endpoint:<br />
+        /// GET /sapi/v1/spot/asset/tags<br />
+        /// </para>
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="ct"></param>
+        /// <returns></returns>
+        Task<HttpResult<BinanceAssetTags[]>> GetAssetTagsAsync(string? tag = null, CancellationToken ct = default);
     }
 }
 

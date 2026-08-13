@@ -17,6 +17,7 @@ using Binance.Net.Objects.Models.Spot.Staking;
 
 namespace Binance.Net.Converters
 {
+    [JsonSerializable(typeof(BinanceAssetTags[]))]
     [JsonSerializable(typeof(BinanceCombinedStream<BinanceReferencePriceUpdate>))]
     [JsonSerializable(typeof(BinanceResponse<BinanceWebsocketApiWrapper>))]
     [JsonSerializable(typeof(BinanceResponse<BinanceReferencePriceCalculation>))]
