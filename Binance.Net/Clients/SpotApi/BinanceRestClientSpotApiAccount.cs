@@ -487,7 +487,7 @@ namespace Binance.Net.Clients.SpotApi
             parameters.AddOptionalParameter("toSymbol", toSymbol);
             parameters.AddOptionalParameter("recvWindow", receiveWindow?.ToString(CultureInfo.InvariantCulture) ?? _baseClient.ClientOptions.ReceiveWindow.TotalMilliseconds.ToString(CultureInfo.InvariantCulture));
 
-            var request = _definitions.GetOrCreate(HttpMethod.Post, _baseClient.BaseAddress, "sapi/v1/asset/transfer", BinanceExchange.RateLimiter.SpotRestUid, 900, true);
+            var request = _definitions.GetOrCreate(HttpMethod.Post, _baseClient.BaseAddress, "sapi/v1/asset/transfer", BinanceExchange.RateLimiter.SpotRestUid, 300, true);
             return await _baseClient.SendAsync<BinanceTransaction>(request, parameters, ct).ConfigureAwait(false);
         }
         #endregion
