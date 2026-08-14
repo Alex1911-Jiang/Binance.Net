@@ -165,9 +165,9 @@ namespace Binance.Net.Objects.Models.Futures.Socket
         [JsonPropertyName("tt"), JsonConverter(typeof(DateTimeConverter))]
         public DateTime? TriggerTime { get; set; }
         /// <summary>
-        /// ["<c>ai</c>"] Whether the algo order was activated (only for trailing stop orders)
+        /// ["<c>ia</c>"] Whether the algo order was activated (only for trailing stop orders)
         /// </summary>
-        [JsonPropertyName("ai")]
+        [JsonPropertyName("ia")]
         public bool? Activated { get; set; }
     }
 }
