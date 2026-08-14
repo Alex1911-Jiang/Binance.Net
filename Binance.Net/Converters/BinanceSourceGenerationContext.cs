@@ -1,7 +1,9 @@
+using Binance.Net.Interfaces.Clients.SpotApi;
 using Binance.Net.Objects;
 using Binance.Net.Objects.Models;
 using Binance.Net.Objects.Models.Futures;
 using Binance.Net.Objects.Models.Futures.Socket;
+using Binance.Net.Objects.Models.General.Affiliate;
 using Binance.Net.Objects.Models.Spot;
 using Binance.Net.Objects.Models.Spot.Blvt;
 using Binance.Net.Objects.Models.Spot.Convert;
@@ -657,6 +659,9 @@ namespace Binance.Net.Converters
     [JsonSerializable(typeof(Objects.Models.Spot.VipLoans.BinanceVipLoanRenewData[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.VipLoans.BinanceVipLoanRepayData[]))]
     [JsonSerializable(typeof(Objects.Models.Spot.VipLoans.BinanceVipLoanRepayHistoryData[]))]
+
+    [JsonSerializable(typeof(Objects.Models.General.Affiliate.BinanceAffiliateResponse<BinanceInviteePerformance>))]
+    [JsonSerializable(typeof(Objects.Models.General.Affiliate.BinanceAffiliateResponse<BinanceCodePerformance>))]
 
     [JsonSerializable(typeof(Enums.SymbolFilterType[]))]
     [JsonSerializable(typeof(BinanceConstituents))]

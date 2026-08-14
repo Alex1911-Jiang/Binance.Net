@@ -5,12 +5,10 @@ using Binance.Net.Objects.Internal;
 using Binance.Net.Objects.Models.Spot;
 using Binance.Net.Objects.Options;
 using CryptoExchange.Net.Clients;
-using CryptoExchange.Net.Converters.MessageParsing;
 using CryptoExchange.Net.Converters.MessageParsing.DynamicConverters;
 using CryptoExchange.Net.Objects.Errors;
 using CryptoExchange.Net.RateLimiting.Interfaces;
 using CryptoExchange.Net.SharedApis;
-using System.Net.Http.Headers;
 
 namespace Binance.Net.Clients.SpotApi
 {
